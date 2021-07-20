@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS beat_it_db;
+
+CREATE DATABASE beat_it_db;
