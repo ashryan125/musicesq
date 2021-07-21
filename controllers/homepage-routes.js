@@ -11,7 +11,7 @@ router.get('/', (req,res) => {
         dislikes: 2,
         reviews: [],
         user: {
-            username: 'test_user'
+            username: 'Sonika'
         }
     });
 });
