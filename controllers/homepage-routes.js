@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const sequelize = require('../config/connection');
 
-router.get('/', (req,res) => {
+router.get('/', (req, res) => {
     res.render('homepage', {
         id: 1,
         songName: 'A sky full of stars',
@@ -14,6 +15,10 @@ router.get('/', (req,res) => {
             username: 'Sonika'
         }
     });
+});
+
+router.get('/login', (req, res) => {
+    res.render('login');
 });
 
 //findall
