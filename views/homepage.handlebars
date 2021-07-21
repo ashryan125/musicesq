@@ -1,1 +1,19 @@
-<div>You are on the homepage</div>
+<ol class="post-list">
+  <li>
+    <article class="post">
+      <div class="songName">
+        <span>{{songName}}</span>
+        <span>({{artist}})</span>
+      </div>
+      <div>
+        {{user.username}} on
+        {{created_at}}
+        |
+        <a href="/post/{{id}}">{{reviews.length}} review(s)</a>
+        <div>
+            {{likes}} likes and {{dislikes}} dislikes
+        </div>
+      </div>
+    </article>
+  </li>
+</ol>
