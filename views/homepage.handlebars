@@ -7,11 +7,13 @@
             </div>
             <div>
                 <div>
-                    {{user.username}} on
-                    {{created_at}}
+                    <a href="/post/{{id}}">{{reviews.length}} review(s)</a>
                 </div>
                 <div>
-                    <a href="/post/{{id}}">{{reviews.length}} review(s)</a>
+                    <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+                </div>
+                <div>
+                    {{created_at}} by {{user.username}}
                 </div>
                 <div>
                     {{likes}} likes

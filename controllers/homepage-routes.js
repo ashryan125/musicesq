@@ -11,6 +11,7 @@ router.get('/', (req, res) => {
         likes: 10,
         dislikes: 2,
         reviews: [],
+        comments: [{}],
         user: {
             username: 'Sonika'
         }

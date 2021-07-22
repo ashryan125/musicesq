@@ -1,10 +1,23 @@
-<form class="comment-form">
-    <div>
-        <textarea name="comment-body"></textarea>
-    </div>
+<section>
+    <h2>Create New Post</h2>
 
-    <div>
-        <button type="submit">add comment</button>
-        <button type="button" class="upvote-btn">upvote</button>
-    </div>
-</form>
+    <form class="new-post-form">
+        <div>
+            <label for="post-song">Song Name</label>
+            <input type="text" id="post-song" name="post-song" />
+        </div>
+        <div>
+            <label for="post-artist">Artist</label>
+            <input id="post-artist" name="post-artist" />
+        </div>
+        <div>
+            <label for="post-review">Review</label>
+            <input id="post-review" name="post-review" />
+        </div>
+        <div>
+            <label for="post-rate">Rating</label>
+            <input id="post-rate" name="post-rate" />
+        </div>
+        <button type="submit" class="btn">Create</button>
+    </form>
+</section>
