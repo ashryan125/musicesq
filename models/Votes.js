@@ -1,14 +1,18 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, Sequelize } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Vote extends Model {}
+class Votes extends Model {}
 
-Vote.init(
+Votes.init(
   {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true
+    },
+    vote_type: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -30,8 +34,8 @@ Vote.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'vote'
+    modelName: 'votes'
   }
 );
 
-module.exports = Vote;
+module.exports = Votes;
