@@ -3,12 +3,12 @@ const sequelize = require('../config/connection');
 // create our Post model
 class Post extends Model {
   // change api route for router.put to Post.votes(req.body { Vote })
-  static votes(body, models) {
+  static upvote(body, models) {
     console.log('error in Post model extends Model');
     return models.Votes.create({
       user_id: body.user_id,
       post_id: body.post_id,
-      vote_type: body.vote_type
+      // vote_type: body.vote_type
     }).then(() => {
       return Post.findOne({
         where: {
@@ -19,8 +19,9 @@ class Post extends Model {
           'song_title',
           'song_artist',
           'created_at',
-          [sequelize.literal('(SELECT COUNT(*) FROM votes WHERE post.id = votes.post.id AND votes.voteType = true)'), 'upvote_count'],
-          [sequelize.literal('(SELECT COUNT(*) FROM votes WHERE post.id = otes.post.id AND votes.voteType = false)'), 'downvote_count']
+          [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'upvote_count']
+          [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'downvote_count']
+          
         ],
         include: [
           {

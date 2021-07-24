@@ -4,237 +4,194 @@ const votedata = [
   {
     user_id: 2,
     post_id: 1,
-    vote_type: true
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 1,
     post_id: 5,
-    vote_type: true
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 3,
     post_id: 1,
-    vote_type: false
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 2,
     post_id: 5,
-    vote_type: true
+    // upvote: 0,
+    downvote: 1
   },
   {
     user_id: 4,
     post_id: 3,
-    vote_type: false
+    // upvote: 0,
+    downvote: 1
   },
   {
     user_id: 3,
     post_id: 6,
-    vote_type: true
+    // upvote: 0,
+    downvote: 1
   },
   {
     user_id: 4,
     post_id: 4,
-    vote_type: true
-  },
-  {
-    user_id: 3,
-    post_id: 1,
-    vote_type: true
-  },
-  {
-    user_id: 3,
-    post_id: 6,
-    vote_type: false
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 3,
     post_id: 3,
-    vote_type: true
-  },
-  {
-    user_id: 3,
-    post_id: 3,
-    vote_type: false
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 5,
     post_id: 2,
-    vote_type: false
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 6,
     post_id: 6,
-    vote_type: false
+    // upvote: 0,
+    downvote: 1
   },
   {
     user_id: 5,
     post_id: 5,
-    vote_type: true
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 6,
     post_id: 1,
-    vote_type: true
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 6,
     post_id: 2,
-    vote_type: true
-  },
-  {
-    user_id: 3,
-    post_id: 1,
-    vote_type: false
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 6,
     post_id: 4,
-    vote_type: false
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 2,
     post_id: 4,
-    vote_type: true
-  },
-  {
-    user_id: 1,
-    post_id: 5,
-    vote_type: true
+    // upvote: 0,
+    downvote: 1
   },
   {
     user_id: 2,
     post_id: 2,
-    vote_type: false
-  },
-  {
-    user_id: 2,
-    post_id: 4,
-    vote_type: false
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 3,
     post_id: 5,
-    vote_type: true
-  },
-  {
-    user_id: 5,
-    post_id: 2,
-    vote_type: true
+    // upvote: 0,
+    downvote: 1
   },
   {
     user_id: 6,
     post_id: 3,
-    vote_type: false
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 1,
     post_id: 1,
-    vote_type: true
+    upvote: 1,
+    // downvote: 0
   },
   {
-    user_id: 2,
-    post_id: 4,
-    vote_type: true
-  },
-  {
-    user_id: 6,
-    post_id: 3,
-    vote_type: false
-  },
-  {
-    user_id: 6,
-    post_id: 2,
-    vote_type: true
-  },
-  {
-    user_id: 3,
+    user_id: 4,
     post_id: 1,
-    vote_type: true
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 4,
     post_id: 6,
-    vote_type: false
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 2,
-    post_id: 2,
-    vote_type: true
+    post_id: 6,
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 5,
     post_id: 4,
-    vote_type: false
-  },
-  {
-    user_id: 2,
-    post_id: 5,
-    vote_type: true
-  },
-  {
-    user_id: 6,
-    post_id: 1,
-    vote_type: true
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 1,
     post_id: 2,
-    vote_type: false
+    // upvote: 0,
+    downvote: 1
   },
   {
-    user_id: 2,
+    user_id: 1,
     post_id: 3,
-    vote_type: true
+    // upvote: 0,
+    downvote: 1
   },
   {
     user_id: 1,
-    post_id: 2,
-    vote_type: true
+    post_id: 4,
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 1,
     post_id: 6,
-    vote_type: false
-  },
-  {
-    user_id: 2,
-    post_id: 5,
-    vote_type: true
+    // upvote: 0,
+    downvote: 1
   },
   {
     user_id: 5,
     post_id: 3,
-    vote_type: true
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 5,
     post_id: 6,
-    vote_type: false
-  },
-  {
-    user_id: 6,
-    post_id: 6,
-    vote_type: true
-  },
-  {
-    user_id: 5,
-    post_id: 2,
-    vote_type: true
+    // upvote: 0,
+    downvote: 1
   },
   {
     user_id: 6,
     post_id: 5,
-    vote_type: true
+    upvote: 1,
+    // downvote: 0
   },
   {
     user_id: 4,
     post_id: 2,
-    vote_type: false
+    // upvote: 0,
+    downvote: 1
   },
   {
     user_id: 3,
     post_id: 4,
-    vote_type: true
+    upvote: 1,
+    // downvote: 0
   }
 ];
 
