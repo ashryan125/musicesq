@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+
 // create our Post model
 class Post extends Model {
   // change api route for router.put to Post.votes(req.body { Vote })
@@ -54,12 +55,9 @@ Post.init(
     song_artist: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isURL: true
-      }
     },
     review: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(160),
         allowNull: false
     },
     rating: {
