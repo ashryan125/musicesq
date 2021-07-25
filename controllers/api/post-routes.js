@@ -7,6 +7,7 @@ const withAuth = require("../../utils/auth");
 router.get("/", (req, res) => {
   console.log("======================");
   Post.findAll({
+    order: [["created_at", "DESC"]],
     attributes: [
       "id",
       "song_title",
@@ -20,14 +21,9 @@ router.get("/", (req, res) => {
       ],
       [
         sequelize.literal('(SELECT COUNT(NULLIF(votes.downvote, 0)) FROM votes WHERE post.id = votes.post_id)'),
-        'downvotesCount',
+        'downvotesCount'
       ]
-      // [
-      //   sequelize.literal('(SELECT COUNT(distinct votes.upvote) AS downvote FROM votes WHERE post.id = votes.post_id)'),
-      //   'downvotesCountfbhdgdfh',
-      // ]
     ],
-    order: [["created_at", "DESC"]],
     include: [
       {
         model: Comment,

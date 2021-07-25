@@ -28,12 +28,20 @@ router.get("/:id", (req, res) => {
         attributes: ['id', 'song_title', 'song_artist', 'review', 'rating', 'created_at']
       },
       {
-        // need to fix associations for votes to show upvotes and downvotes
-        model: Votes,
-        attributes: ['song_title'],
-        through: Votes,
-        as: 'voted_posts'
-      }
+        model: Comment,
+        attributes: ['id', 'comment_text', 'created_at'],
+        include: {
+          model: Post,
+          attributes: ['song_title']
+        }
+      },
+      // {
+      //   // need to fix associations for votes to show upvotes and downvotes
+      //   model: Votes,
+      //   attributes: ['song_title'],
+      //   through: Votes,
+      //   as: 'voted_posts'
+      // }
     ]
   })
     .then((dbUserData) => {
