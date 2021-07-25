@@ -5,18 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beat-IT</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
-    {{!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> --}}
+  
 </head>
 
 <body>
+      <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
     <div>
         <header>
             <h1>
                 <a href="/">Beat-IT</a>
             </h1>
             <nav>
-                <a href="/login">login / signup</a>
+                {{#if loggedIn}}
+                <a href="/homepage">Home</a>
+                <a href="/post">Dashboard</a>
+                <a href="/">Logout</a>
+                {{else}}
+                <a href="/login">Login/SignUp</a>
+                {{/if}}
             </nav>
         </header>
         <main>
@@ -26,7 +34,6 @@
             Thanks for visiting!
         </footer>
     </div>
-
 </body>
 
 </html>
