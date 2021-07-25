@@ -10,9 +10,11 @@
 ---
 
 ## User Story
+```
 AS a user </br>
 I NEED to be able to login into a site and give a random/search song from Spotify and be able to post a review comment and vote/comment on other posts </br>
 SO THAT I can collaborate with other audiophiles and gain rank with upvotes
+```
 
 ---
 
@@ -21,6 +23,7 @@ SO THAT I can collaborate with other audiophiles and gain rank with upvotes
 ---
 
 ## API's
+* Spotify
 
 ---
 
@@ -42,7 +45,9 @@ SO THAT I can collaborate with other audiophiles and gain rank with upvotes
 ---
 
 ## Website 
-[BeatIT]()
+Deployed on Heroku!
+
+[Beat-IT](https://beatit-music-app.herokuapp.com/)
 
 ---
 
