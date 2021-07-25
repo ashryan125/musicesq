@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Post, Comment } = require("../../models");
+const { User, Post, Votes, Comment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // GET /api/users
@@ -22,6 +22,19 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
+    include: [
+      {
+        model: Post,
+        attributes: ['id', 'song_title', 'song_artist', 'review', 'rating', 'created_at']
+      },
+      {
+        // need to fix associations for votes to show upvotes and downvotes
+        model: Votes,
+        attributes: ['song_title'],
+        through: Votes,
+        as: 'voted_posts'
+      }
+    ]
   })
     .then((dbUserData) => {
       if (!dbUserData) {

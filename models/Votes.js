@@ -10,7 +10,6 @@ Votes.init(
       primaryKey: true,
       autoIncrement: true,
     },
-     // routes to server - setupdate to:
     upvote: {
       type: DataTypes.INTEGER,
       allowNull: true,

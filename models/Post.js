@@ -20,9 +20,14 @@ class Post extends Model {
           'song_title',
           'song_artist',
           'created_at',
-          [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'upvote_count']
-          [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'downvote_count']
-          
+          [
+            sequelize.literal('(SELECT COUNT(NULLIF(votes.upvote, 0)) FROM votes WHERE post.id = votes.post_id)'),
+            'upvotesCount',
+          ],
+          [
+            sequelize.literal('(SELECT COUNT(NULLIF(votes.downvote, 0)) FROM votes WHERE post.id = votes.post_id)'),
+            'downvotesCount',
+          ]
         ],
         include: [
           {
