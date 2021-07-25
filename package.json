@@ -27,6 +27,7 @@
     "js-base64": "^3.6.1",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.12",
-    "sequelize": "^6.6.5"
+    "sequelize": "^6.6.5",
+    "spotify-web-api-node": "^5.0.2"
   }
 }

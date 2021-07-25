@@ -2,9 +2,9 @@ const express = require('express');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const path = require('path');
-const base64 = require('js-base64');
+//const base64 = require('js-base64');
 let http = require('http');
-
+const { Buffer } = require('buffer');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -19,38 +19,25 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// spotify
+//Spotify
 
-let client64 = Buffer.from(process.env['clientID'], base64);
-let secret64 = Buffer.from(process.env['clientID'], base64);
+// Spotify dependencies
+var SpotifyWebApi = require('spotify-web-api-node');
 
-const options = {
-  hostname: 'https://accounts.spotify.com/api/token',
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/x-www-form-urlencoded',
-    'Authorization': 'Basic ' + client64 + ':' + secret64,
-    'grant_type' : 'client_credentials',
-  }
-};
+var spotifyApi = new SpotifyWebApi({
+  clientId: process.env['clientID'],
+  clientSecret: process.env['clientSecret'],
+  redirectUri: process.env['redirect']
+})
 
-const req = http.request(options, (res) => {
-  res.setEncoding('utf8');
-  // process the data bit by bit or in chunks...
-  res.on('data', (chunk) => {});
-  // ...and do something with it when there is no more data in response
-  res.on('end', () => {
-   console.log('No more data in response.');
-  });
-});
+// Getting access token
+spotifyApi.clientCredentialsGrant().then(
+  function(data) {
+    console.log('The access token expires in ' + data.body['expires_in']);
+    console.log('The access token is ' + data.body['access_token']);
+})
 
-// handle the error explicitly
-req.on('error', (e) => {
-  console.error(`problem with request: ${e.message}`);
-});
-
-req.end();
-
+console.log(process.env['clientID'])
 // turn on connection to db and server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
