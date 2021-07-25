@@ -32,12 +32,16 @@ var spotifyApi = new SpotifyWebApi({
 
 // Getting access token
 spotifyApi.clientCredentialsGrant().then(
-  function(data) {
+  function (data) {
+
+    //putting token into env variable
+    process.env['spotifyAccess'] = data.body.access_token;
+
+    //console logs to give access info to dev
     console.log('The access token expires in ' + data.body['expires_in']);
     console.log('The access token is ' + data.body['access_token']);
-})
+  })
 
-console.log(process.env['clientID'])
 // turn on connection to db and server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
