@@ -2,28 +2,18 @@
 
 ## Description
 
+### Website 
+Deployed on Heroku!
+
+[Beat-IT](https://beatit-music-app.herokuapp.com/)
+
 ---
 
 ## Table of Contents
-
-
----
-
-## User Story
-```
-AS a user </br>
-I NEED to be able to login into a site and give a random/search song from Spotify and be able to post a review comment and vote/comment on other posts </br>
-SO THAT I can collaborate with other audiophiles and gain rank with upvotes
-```
-
----
-
-## Acceptance Criteria
-
----
-
-## API's
-* Spotify
+* [Built With](#built-with)
+* [Installation](#installation)
+* [User Story](#user-story)
+* [Video of App in Action](#video)
 
 ---
 
@@ -39,17 +29,42 @@ SO THAT I can collaborate with other audiophiles and gain rank with upvotes
 
 ---
 
+## Installation
+Clone the Github repo.
+```https://github.com/ashryan125/musicesq.git```
+
+Once in the properly cloned folder, run ```npm install``` to install the following dependencies:
+
+ * bcrypt
+ * connect-session-sequelize
+ * dotenv
+ * express
+ * express-handlebars
+ * express-session
+ * materialize-css
+ * mysql2
+ * nodemon
+ * sequelize
+
+---
+
+## User Story
+```
+AS a user
+I NEED to be able to login into a site
+and give a random/search song from
+Spotify and be able to post a
+review comment and vote/comment on other posts
+SO THAT I can collaborate with other audiophiles and gain rank with upvotes
+```
+
+---
+
 ## ScreenShot
 
 
 ---
 
-## Website 
-Deployed on Heroku!
-
-[Beat-IT](https://beatit-music-app.herokuapp.com/)
-
----
 
 ## Contribution
 Made with love by Reuben, Ashley, Sonika and Rohan 
