@@ -1,8 +1,12 @@
     <link rel="stylesheet" href="/stylesheets/autocomp.css">
 
 <section>
-    <h2>Create New Post</h2>
+    <a href="/post">Dashboard</a>
+    <a href="/settings">Settings</a>
+    <a href="/your-posts">Your Posts</a>
+    <a href="/activity">Activity</a>
 
+    <h2>Create New Post</h2>
     <form class="new-post-form">
         {{!-- <div>
             <label for="post-song">Song Name</label>
@@ -32,16 +36,3 @@
     </form>
 </section>
 
-{{#if posts.length}}
-<section>
-    <h2>Your Posts</h2>
-    <ol>
-        {{#each posts as |post|}}
-        <li>
-            {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-        </li>
-        {{/each}}
-    </ol>
-</section>
-{{/if}}
