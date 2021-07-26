@@ -1,0 +1,29 @@
+<section>
+    <a href="/post">Dashboard</a>
+    <a href="/settings">Settings</a>
+    <a href="/your-posts">Your Posts</a>
+    <a href="/activity">Activity</a>
+
+    <div>
+        <ol class="post-list">
+            {{#each posts}}
+            <li>
+                <article class="post">
+                    <div class="title">
+                        <a href="{{song_title}}" target="_blank">{{song_artist}}</a>
+                        <span>({{song_title}})</span>
+                        <p>Rating: ({{rating}})</p>
+                        <p>Review: ({{review}}) </p>
+                        by {{user.username}} on
+                        {{created_at}}
+                    </div>
+                    <div class="meta">
+                        {{upvotesCount}} upvote(s) | {{downvotesCount}} downvote(s) |
+                        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+                    </div>
+                </article>
+            </li>
+            {{/each}}
+        </ol>
+    </div>
+</section>
