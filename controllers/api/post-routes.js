@@ -103,7 +103,7 @@ router.post("/", (req, res) => {
     song_artist: req.body.song_artist,
     review: req.body.review,
     rating: req.body.rating,
-    user_id: req.body.user_id,
+    user_id: req.session.user_id
   })
     .then((dbPostData) => res.json(dbPostData))
     .catch((err) => {
@@ -116,6 +116,7 @@ router.post("/", (req, res) => {
 router.put('/upvote', (req, res) => {
   // need to update associations to allow posting/editing of voting??
   if (req.session) {
+    console.log(req.body);
     // pass session id along with all destructured properties on req.body
     Post.upvote({ ...req.body, user_id: req.session.user_id }, { Votes, Comment, User })
       .then(updatedVoteData => res.json(updatedVoteData))

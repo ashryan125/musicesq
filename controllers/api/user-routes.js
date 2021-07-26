@@ -42,14 +42,7 @@ router.get("/:id", (req, res) => {
           attributes: ["song_title"],
         },
       },
-      // {
-      //   // need to fix associations for votes to show upvotes and downvotes
-      //   model: Votes,
-      //   attributes: ['song_title'],
-      //   through: Votes,
-      //   as: 'voted_posts'
-      // }
-    ],
+    ]
   })
     .then((dbUserData) => {
       if (!dbUserData) {
