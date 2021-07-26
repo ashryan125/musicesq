@@ -97,7 +97,7 @@ router.get("/:id", (req, res) => {
 });
 
 // create a post
-router.post("/", (req, res) => {
+router.post("/", withAuth, (req, res) => {
   Post.create({
     song_title: req.body.song_title,
     song_artist: req.body.song_artist,
@@ -113,7 +113,7 @@ router.post("/", (req, res) => {
 });
 
 // allow voting on a post
-router.put('/upvote', (req, res) => {
+router.put('/upvote', withAuth, (req, res) => {
   // need to update associations to allow posting/editing of voting??
   if (req.session) {
     console.log(req.body);
@@ -128,7 +128,7 @@ router.put('/upvote', (req, res) => {
 });
 
 // update a post
-router.put("/:id", (req, res) => {
+router.put("/:id", withAuth, (req, res) => {
   Post.update(
     {
       song_title: req.body.song_title,
@@ -156,7 +156,7 @@ router.put("/:id", (req, res) => {
 });
 
 // delete a post
-router.delete("/:id", (req, res) => {
+router.delete("/:id", withAuth, (req, res) => {
   Post.destroy({
     where: {
       id: req.params.id,
