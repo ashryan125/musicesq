@@ -8,7 +8,8 @@ async function upvoteClickHandler(event) {
   const response = await fetch('/api/posts/upvote', {
     method: 'PUT',
     body: JSON.stringify({
-      post_id: id
+      post_id: id,
+      upvote: 1
     }),
     headers: {
       'Content-Type': 'application/json'
@@ -18,7 +19,7 @@ async function upvoteClickHandler(event) {
   if (response.ok) {
     document.location.reload();
   } else {
-    alert(response.statusText);
+    alert('You can only vote once!');
   }
 };
 
