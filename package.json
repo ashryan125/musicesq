@@ -29,6 +29,7 @@
     "materialize-css": "^1.0.0-rc.2",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.12",
-    "sequelize": "^6.6.5"
+    "sequelize": "^6.6.5",
+    "spotify-web-api-node": "^5.0.2"
   }
 }

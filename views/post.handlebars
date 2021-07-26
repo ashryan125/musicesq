@@ -1,3 +1,5 @@
+    <link rel="stylesheet" href="/stylesheets/autocomp.css">
+
 <section>
     <a href="/post">Dashboard</a>
     <a href="/settings">Settings</a>
@@ -6,14 +8,22 @@
 
     <h2>Create New Post</h2>
     <form class="new-post-form">
-        <div>
+        {{!-- <div>
             <label for="post-song">Song Name</label>
             <input type="text" id="post-song" name="post-song" />
-        </div>
-        <div>
+        </div> --}}
+
+        <form autocomplete="off" action="/action_page.php">
+            <div class="autocomplete" style="width:300px;">
+                <input id="myInput" type="text" name="songTitle" placeholder="Song Title">
+            </div>
+            <input type="submit">
+        </form>
+
+        {{!-- <div>
             <label for="post-artist">Artist</label>
             <input id="post-artist" name="post-artist" />
-        </div>
+        </div> --}}
         <div>
             <label for="post-review">Review</label>
             <input id="post-review" name="post-review" />
