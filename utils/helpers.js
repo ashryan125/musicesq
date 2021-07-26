@@ -1,11 +1,4 @@
 module.exports = {
-<<<<<<< HEAD
-    format_date: date => {
-        return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${new Date(date).getFullYear()}`;
-      },
-      
-  }
-=======
   format_date: (date) => {
     return `${new Date(date).getMonth() + 1}/${new Date(
       date
@@ -27,4 +20,3 @@ module.exports = {
       .split("?")[0];
   },
 };
->>>>>>> e77f1360d4eb334a4741d8eed6846b7b18a9f467
