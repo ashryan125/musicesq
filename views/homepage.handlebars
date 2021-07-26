@@ -1,25 +1,7 @@
 <ol class="post-list">
-    <li>
-        <article class="post">
-            <div class="songName">
-                <div>Song Name: {{songName}}</div>
-                <div>Artist: {{artist}}</div>
-            </div>
-            <div>
-                <div>
-                    {{user.username}} on
-                    {{created_at}}
-                </div>
-                <div>
-                    <a href="/post/{{id}}">{{reviews.length}} review(s)</a>
-                </div>
-                <div>
-                    {{likes}} likes
-                </div>
-                <div>
-                    {{dislikes}} dislikes
-                </div>
-            </div>
-        </article>
-    </li>
+  {{#each posts as |post|}}
+  <li>
+    {{> post-info post }}
+  </li>
+  {{/each}}
 </ol>
