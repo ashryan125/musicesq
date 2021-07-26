@@ -18,13 +18,13 @@
                 <a href="/">Beat-IT</a>
             </h1>
             <nav>
-              
+                {{#if loggedIn}}
                 <a href="/">Home</a>
-                <a href="/post">Dashboard</a>
+                <a href="/dashboard">Dashboard</a>
                 <button id="logout" class="btn-no-style">logout</button>
-               
+               {{else}}
                 <a href="/login">Login/SignUp</a>
-                
+                 {{/if}}
             </nav>
         </header>
         <main>
@@ -34,9 +34,9 @@
             Thanks for visiting!
         </footer>
     </div>
-
+{{#if loggedIn}}
       <script src="/javascript/logout.js"></script>
-
+ {{/if}}
 </body>
 
 </html>
