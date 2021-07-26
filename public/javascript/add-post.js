@@ -1,15 +1,24 @@
 async function newFormHandler(event) {
     event.preventDefault();
   
-    const title = document.querySelector('input[name="post-title"]').value;
-    const post_url = document.querySelector('input[name="post-url"]').value;
-  
+
+    const song_title = document.querySelector('input[name="song-title"]').value;
+    const song_artist = document.querySelector('input[name="song-artist"]').value;
+
+    const rating = document.querySelector('input[name="rating"]:checked').value;
+
+    const review = document.querySelector('input[name="review"]').value;
+    // const newRating = parseInt(rating);
+   
+
     const response = await fetch(`/api/posts`, {
       method: 'POST',
       body: JSON.stringify({
-        title,
-        post_url
-      }),
+        song_title,
+        song_artist,
+        review,
+        rating
+      }), 
       headers: {
         'Content-Type': 'application/json'
       }
@@ -18,6 +27,7 @@ async function newFormHandler(event) {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
+        console.log(songTitle, "\n", songArtist, "\n", review, "\n", rating),
       alert(response.statusText);
     }
   }
