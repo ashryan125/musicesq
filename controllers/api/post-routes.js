@@ -97,13 +97,13 @@ router.get("/:id", (req, res) => {
 });
 
 // create a post
-router.post("/", (req, res) => {
+router.post("/", withAuth, (req, res) => {
   Post.create({
     song_title: req.body.song_title,
     song_artist: req.body.song_artist,
     review: req.body.review,
     rating: req.body.rating,
-    user_id: req.body.user_id,
+    user_id: req.session.user_id
   })
     .then((dbPostData) => res.json(dbPostData))
     .catch((err) => {
@@ -113,9 +113,10 @@ router.post("/", (req, res) => {
 });
 
 // allow voting on a post
-router.put('/upvote', (req, res) => {
+router.put('/upvote', withAuth, (req, res) => {
   // need to update associations to allow posting/editing of voting??
   if (req.session) {
+    console.log(req.body);
     // pass session id along with all destructured properties on req.body
     Post.upvote({ ...req.body, user_id: req.session.user_id }, { Votes, Comment, User })
       .then(updatedVoteData => res.json(updatedVoteData))
@@ -127,7 +128,7 @@ router.put('/upvote', (req, res) => {
 });
 
 // update a post
-router.put("/:id", (req, res) => {
+router.put("/:id", withAuth, (req, res) => {
   Post.update(
     {
       song_title: req.body.song_title,
@@ -155,7 +156,7 @@ router.put("/:id", (req, res) => {
 });
 
 // delete a post
-router.delete("/:id", (req, res) => {
+router.delete("/:id", withAuth, (req, res) => {
   Post.destroy({
     where: {
       id: req.params.id,

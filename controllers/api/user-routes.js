@@ -42,14 +42,7 @@ router.get("/:id", (req, res) => {
           attributes: ["song_title"],
         },
       },
-      // {
-      //   // need to fix associations for votes to show upvotes and downvotes
-      //   model: Votes,
-      //   attributes: ['song_title'],
-      //   through: Votes,
-      //   as: 'voted_posts'
-      // }
-    ],
+    ]
   })
     .then((dbUserData) => {
       if (!dbUserData) {
@@ -77,7 +70,8 @@ router.post("/", (req, res) => {
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
 
-      res.json(dbUserData);
+      res.json({ user: dbUserData, message: 'You are now logged in!' });
+    
     });
   });
 });
