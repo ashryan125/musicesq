@@ -1,14 +1,12 @@
 <div class="card">
     <div class="card-header">
-        <h4><a class="link" href="/post/{{id}}">{{song_title}}</a></h4>
-        <h5>{{artist}}</h5>
-        <p>Posted by {{user.username}} on {{format_date created_at}}</p>
+        <a href="/post/{{id}}">{{song_title}}</a>
+        <span>({{song_artist}})</span>
+        <p>Rating: ({{rating}})</p>
+         <p>Review: ({{review}}) </p>
+         by {{user.username}} on
+        {{format_date created_at}} 
+     {{upvotesCount}} upvote(s) | {{downvotesCount}} downvote(s)  | 
+        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
     </div>
-    <div class="card-body">
-        <p>{{review}}</p>
-        <p><a>{{comments.length}}</a></p>
-        <p><a>Like</a></p>
-        <p><a>Dislike</a></p>
-    </div>
-
 </div>
