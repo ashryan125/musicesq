@@ -18,7 +18,13 @@
                 <a href="/">Beat-IT</a>
             </h1>
             <nav>
+                {{#if loggedIn}}
+                <a href="/homepage">Home</a>
+                <a href="/post">Dashboard</a>
+                <a href="/">Logout</a>
+                {{else}}
                 <a href="/login">Login/SignUp</a>
+                {{/if}}
             </nav>
         </header>
         <main>
