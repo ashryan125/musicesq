@@ -5,7 +5,7 @@ const path = require('path');
 const helpers = require('./utils/helpers');
 
 const app = express();
-const PORT = process.env.PORT || 3005;
+const PORT = process.env.PORT || 3001;
 
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({ helpers });
@@ -22,6 +22,7 @@ const sess = {
     db: sequelize
   })
 };
+
 
 app.use(session(sess));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -67,7 +68,7 @@ spotifyApi.clientCredentialsGrant().then(
 //   });
 
 
-
+app.use(routes)
 // turn on connection to db and server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening on port ' + PORT));
