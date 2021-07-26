@@ -115,12 +115,15 @@ router.post("/", (req, res) => {
 // allow voting on a post
 router.put('/upvote', (req, res) => {
   // need to update associations to allow posting/editing of voting??
-  Post.upvote(req.body, { Vote })
-  .then(updatedPostData => res.json(updatedPostData))
-  .catch(err => {
-    console.log(err);
-    res.status(400).json(err);
-  });
+  if (req.session) {
+    // pass session id along with all destructured properties on req.body
+    Post.upvote({ ...req.body, user_id: req.session.user_id }, { Votes, Comment, User })
+      .then(updatedVoteData => res.json(updatedVoteData))
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  }
 });
 
 // update a post
