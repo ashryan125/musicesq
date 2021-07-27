@@ -12,7 +12,7 @@
     line-height: 1.5;
     font-family: sans-serif;
     background-color:black;
-    color:black;
+    color:white;
   }
   
   header {
@@ -234,21 +234,6 @@
     color: #EA706C;
   }
 
-  .signup-form{
-    width: 80vw;
-    margin-left:50px;
-    border: white 2px solid;
-    padding: 5px;
-  }
-
-  .login-form{
-    width: 80vw;
-    margin-left: -175px;
-    border: white 2px solid;
-    padding: 5px;
-    margin-top: 10px;
-  }
-
-  .btn-forms{
-    margin-left: 600px;
+  .nav-wrapper img{
+    width: 10%;
   }
