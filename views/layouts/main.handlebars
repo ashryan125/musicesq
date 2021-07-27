@@ -8,34 +8,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="/stylesheets/autocomp.css">
-  
+
 </head>
 
 <body>
     <div>
-        <nav class="nav-extended">
-            <div class="nav-wrapper">
-                <a href="/" class="brand-logo">Beat-IT</a>
-                {{#if loggedIn}}
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="/">Home</a></li>
-                    <button id="logout" class="btn-no-style">logout</button>
-                </ul>
-            </div>
-            <div class="nav-content">
-                <ul class= "tabs">
-                    <li class="tab"><a href="/dashboard">Dashboard</a></li>
-                    <li class="tab"><a href="/your-posts">Your Posts</a></li>
-                    <li class="tab"><a href="/activity">Activity</a></li>
-                    <li class="tab"><a href="/settings">Settings</a></li>
-                    {{else}}
+        <header>
+            <nav class="nav-extended">
+                <div class="nav-wrapper">
+                    <a href="/" class="brand-logo">Beat-IT</a>
+                    {{#if loggedIn}}
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="/login">Login/SignUp</a></li>
+                        <li><a href="/">Home</a></li>
+                        <button id="logout" class="btn-no-style">logout</button>
                     </ul>
-                    {{/if}}
-                </ul>
-            </div>
-        </nav>
+                </div>
+                <div class="nav-content">
+                    <ul class="tabs">
+                        <li class="tab"><a href="/dashboard">Dashboard</a></li>
+                        <li class="tab"><a href="/your-posts">Your Posts</a></li>
+                        <li class="tab"><a href="/activity">Activity</a></li>
+                        <li class="tab"><a href="/settings">Settings</a></li>
+                        {{else}}
+                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                            <li><a href="/login">Login/SignUp</a></li>
+                        </ul>
+                        {{/if}}
+                    </ul>
+                </div>
+            </nav>
+        </header>
         <main>
             {{{ body }}}
         </main>

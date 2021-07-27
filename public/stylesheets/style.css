@@ -8,10 +8,16 @@
     color: #EA706C;
   }
   
-  body {
+  body, html {
+    line-height: 1.5;
     font-family: sans-serif;
     background-color:black;
     color:black;
+  }
+  
+  header {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .tabs {
@@ -198,8 +204,8 @@
   }
 
   .nav-extended {
+    margin: 7 px 0;
     padding-top: 15px;
-    margin: 20px;
     background-color: black;
   }
 
@@ -219,5 +225,12 @@
     color: #EA706C;
   }
 
-  
+ /*Media query for laptops and smaller screens*/
+@media screen and (max-width: 990px){
+  /* header {
+    padding-bottom: 0;
+    justify-content: center;
+    position: relative;
+    } */
+} 
   
