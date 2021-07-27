@@ -29,15 +29,31 @@ spotifyApi.clientCredentialsGrant().then(
 //track search, needs variable to pass in from input
 router.get("/:song", (req, res) => {
   let query = req.params.song
-  spotifyApi.searchTracks(query, { limit: 10 }, function (err, data) {
+  spotifyApi.searchTracks(query, { limit: 5, type: 'track'} , function (err, data) {
     if (err) {
       console.log("ERROR: " + err)
 
-    } else {
-      let songData = data
-      console.log(songData);
     }
+
+    //console.log(obj)
+    let respo = []
+    //let resName = []
+    //let resTrack =[]
+    for (i=0;i <= 4; i++) {
+      let obj = data.body.tracks.items[i];
+      let track = obj.name;
+      let artistName = obj.artists[0].name;
+
+      respo.push({track, artistName});
+      //console.log(artistName);
+      //resName.push(artistName);
+    }
+    //console.log(respo);
+    //console.log(resName);
+    return res.send(respo);
   })
 
-});
+})
+
+
 module.exports = router;

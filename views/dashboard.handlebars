@@ -2,10 +2,11 @@
   <h2>Create New Post</h2>
 
   <form class="new-post-form">
-    <div>
-      <label for="song-title">Song Title</label>
-      <input type="text" id="song-title" name="song-title" />
-    </div>
+    <form autocomplete="off" action="/action_page.php" id="form-form-form">
+            <div class="autocomplete" style="width:800px;" id="autocomplete">
+                <input id="searchTitleInput" type="text" name="songTitle" placeholder="Song Title">
+            </div>
+        </form>
     <div>
       <label for="song-artist">Song Artist</label>
       <input id="song-artist" name="song-artist" />
@@ -61,3 +62,4 @@
 {{/if}}
 
 <script src="/javascript/add-post.js"></script>
+<script src="/javascript/input.js"></script>
