@@ -96,7 +96,7 @@
   }
   
   .btn-no-style {
-    background: none;
+    background:none;
     border: none;
     padding: 0;
     cursor: pointer;
@@ -109,10 +109,14 @@
   }
   
   .btn-no-style:hover {
-    background: none;
+    background : none;
     color: white;
   }
   
+  .home a:hover{
+    background : none;
+    color: white;
+  }
   .delete-post-btn {
     background-color: #ff643d;
     color:white 
@@ -211,4 +215,41 @@
 
   }
 
-  
+  .nav-extended {
+    background-color: black;
+  }
+
+  .nav-extended a { 
+    color: #EA706C;
+  }
+
+  .page-footer{
+    background-color: black;
+  }
+
+  .footer-color{
+    color: #EA706C;
+  }
+  .card-content, 
+ a{
+    color: #EA706C;
+  }
+
+  .signup-form{
+    width: 80vw;
+    margin-left:50px;
+    border: white 2px solid;
+    padding: 5px;
+  }
+
+  .login-form{
+    width: 80vw;
+    margin-left: -175px;
+    border: white 2px solid;
+    padding: 5px;
+    margin-top: 10px;
+  }
+
+  .btn-forms{
+    margin-left: 600px;
+  }

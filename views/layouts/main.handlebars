@@ -7,6 +7,7 @@
     <title>Beat-IT</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
+
     <link rel="stylesheet" href="/stylesheets/autocomp.css">
   
 </head>
@@ -15,11 +16,12 @@
     <div>
         <nav class="nav-extended">
             <div class="nav-wrapper">
+            <img src="../../assets/images/beatItLogo-01.png" alt="beat-it logo">
                 <a href="/" class="brand-logo">Beat-IT</a>
                 {{#if loggedIn}}
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="/">Home</a></li>
-                    <button id="logout" class="btn-no-style">logout</button>
+                    <li class="home"><a href="/">Home</a></li>
+                    <button id="logout" class="btn-no-style ">logout</button>
                 </ul>
             </div>
             <div class="nav-content">

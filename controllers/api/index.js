@@ -9,7 +9,7 @@ const inputRoutes = require('./input');
 router.use('/users', userRoutes);
 router.use('/posts', postRoutes);
 router.use('/comments', commentRoutes);
-router.use('/input', inputRoutes);
+ router.use('/input', inputRoutes);
 // router.user('/votes', voteRoutes);
 
 module.exports = router;
