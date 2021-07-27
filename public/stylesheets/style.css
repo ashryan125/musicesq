@@ -96,7 +96,7 @@
   }
   
   .btn-no-style {
-    background: none;
+    background:none;
     border: none;
     padding: 0;
     cursor: pointer;
@@ -109,10 +109,14 @@
   }
   
   .btn-no-style:hover {
-    background: none;
+    background : none;
     color: white;
   }
   
+  .home a:hover{
+    background : none;
+    color: white;
+  }
   .delete-post-btn {
     background-color: #ff643d;
     color:white 
@@ -183,8 +187,11 @@
     font-size: 110%;
   }
 
-<<<<<<< HEAD
-=======
+  .edit{
+    border:white 2px solid;
+
+  }
+
   .nav-extended {
     background-color: black;
   }
@@ -196,7 +203,7 @@
   .page-footer{
     background-color: black;
   }
-  
+
   .footer-color{
     color: #EA706C;
   }
@@ -205,17 +212,21 @@
     color: #EA706C;
   }
 
-  /* .card-content{
-    border-radius: 1px solid white;
-  } */
->>>>>>> 2dac8d2992004c1c003ee96f7d127a9682f3aa15
-  .edit{
-    border:white 2px solid;
-
+  .signup-form{
+    width: 80vw;
+    margin-left:50px;
+    border: white 2px solid;
+    padding: 5px;
   }
 
-<<<<<<< HEAD
-  
-=======
-  
->>>>>>> 2dac8d2992004c1c003ee96f7d127a9682f3aa15
+  .login-form{
+    width: 80vw;
+    margin-left: -175px;
+    border: white 2px solid;
+    padding: 5px;
+    margin-top: 10px;
+  }
+
+  .btn-forms{
+    margin-left: 600px;
+  }
