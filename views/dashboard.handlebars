@@ -1,48 +1,53 @@
 <section>
   <h2>Create New Post</h2>
 
-  <form class="new-post-form">
-    <div>
-      <label for="song-title">Song Title</label>
-      <input type="text" id="song-title" name="song-title" />
+  <form class="new-post-form" autocomplete="off" action="/action_page.php">
+    <div id="form-form-form">
+      <div class="autocomplete" style="width:100%;" id="autocomplete">
+        <input id="searchTitleInput" name="songTitle" placeholder="Song Title">
+      </div>
     </div>
     <div>
       <label for="song-artist">Song Artist</label>
       <input id="song-artist" name="song-artist" />
     </div>
     <div>
+      <label for="song-url">Song Url</label>
+      <input id="song-url" name="song-url" />
+    </div>
+    <div>
       <label for="review">Review (160 characters)</label>
       <input type="text" id="review" name="review" />
     </div>
-      <h3>Rate your song!</h3>
+    <h3>Rate your song!</h3>
 
-       <div class="ratingValue" name="ratingValue">
-        <label>
-          <input name="rating" type="radio" value="1" />
-          <span>1</span>
-        </label>
+    <div class="ratingValue" name="ratingValue">
+      <label>
+        <input name="rating" type="radio" value="1" />
+        <span>1</span>
+      </label>
 
-       <label>
-          <input name="rating" type="radio" value="2" />
-          <span>2</span>
-        </label>
+      <label>
+        <input name="rating" type="radio" value="2" />
+        <span>2</span>
+      </label>
 
-         <label>
-          <input name="rating" type="radio" value="3" />
-          <span>3</span>
-        </label>
+      <label>
+        <input name="rating" type="radio" value="3" />
+        <span>3</span>
+      </label>
 
-         <label>
-          <input name="rating" type="radio" value="4" />
-          <span>4</span>
-        </label>
+      <label>
+        <input name="rating" type="radio" value="4" />
+        <span>4</span>
+      </label>
 
-         <label>
-          <input name="rating" type="radio" value="5" />
-          <span>5</span>
-        </label>
+      <label>
+        <input name="rating" type="radio" value="5" />
+        <span>5</span>
+      </label>
     </div>
-    <button type="submit" class="btn">Create</button>
+    <button type="submit" class="btn" id="submit-form-button">Create</button>
   </form>
 </section>
 
@@ -61,3 +66,4 @@
 {{/if}} --}}
 
 <script src="/javascript/add-post.js"></script>
+<script src="/javascript/input.js"></script>
