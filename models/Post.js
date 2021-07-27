@@ -65,7 +65,7 @@ Post.init(
     },
     song_url: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     review: {
         type: DataTypes.STRING(160),
