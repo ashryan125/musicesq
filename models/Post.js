@@ -20,6 +20,7 @@ class Post extends Model {
           'id',
           'song_title',
           'song_artist',
+          'song_url',
           'created_at',
           [
             sequelize.literal('(SELECT COUNT(NULLIF(votes.upvote, 0)) FROM votes WHERE post.id = votes.post_id)'),
@@ -33,7 +34,7 @@ class Post extends Model {
         include: [
           {
             model: models.Comment,
-            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at' ],
             include: {
               model: models.User,
               attributes: ['username']
@@ -61,6 +62,10 @@ Post.init(
     song_artist: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    song_url: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     review: {
         type: DataTypes.STRING(160),

@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    color: white;
   }
   
   body, html {
@@ -7,8 +8,8 @@
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    background-color: rgb(22, 19, 19);
-    color: #333;
+    background-color:black;
+    color:black;
   }
   
   a {
@@ -167,7 +168,7 @@
   }
   
   .new-post-form input {
-    width: 300px;
+    width: 75%;
   }
   
   .edit-post-form {
@@ -182,9 +183,39 @@
     font-size: 110%;
   }
 
+<<<<<<< HEAD
+=======
+  .nav-extended {
+    background-color: black;
+  }
+
+  .nav-extended a { 
+    color: #EA706C;
+  }
+
+  .page-footer{
+    background-color: black;
+  }
+  
+  .footer-color{
+    color: #EA706C;
+  }
+  .card-content, 
+ a{
+    color: #EA706C;
+  }
+
+  /* .card-content{
+    border-radius: 1px solid white;
+  } */
+>>>>>>> 2dac8d2992004c1c003ee96f7d127a9682f3aa15
   .edit{
     border:white 2px solid;
 
   }
 
+<<<<<<< HEAD
   
+=======
+  
+>>>>>>> 2dac8d2992004c1c003ee96f7d127a9682f3aa15
