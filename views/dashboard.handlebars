@@ -2,12 +2,12 @@
 <section>
   <h2>Create New Post</h2>
 
-  <form class="new-post-form">
-    <form autocomplete="off" action="/action_page.php" id="form-form-form">
-            <div class="autocomplete" style="width:50%;" id="autocomplete">
-                <input id="searchTitleInput" type="text" name="songTitle" placeholder="Song Title">
+  <form class="new-post-form" autocomplete="off" action="/action_page.php">
+        <div   id="form-form-form">
+            <div class="autocomplete" style="width:100%;" id="autocomplete">
+                <input id="searchTitleInput" name="songTitle" placeholder="Song Title">
             </div>
-        </form>
+        </div>
     <div>
       <label for="song-artist">Song Artist</label>
       <input id="song-artist" name="song-artist" />
@@ -48,7 +48,7 @@
           <span>5</span>
         </label>
     </div>
-    <button type="submit" class="btn">Create</button>
+    <button type="submit" class="btn" id="submit-form-button">Create</button>
   </form>
 </section>
 
