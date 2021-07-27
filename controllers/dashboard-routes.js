@@ -13,6 +13,7 @@ router.get("/", withAuth, (req, res) => {
       "id",
       "song_title",
       "song_artist",
+      "song_url",
       "review",
       "rating",
       "created_at",
