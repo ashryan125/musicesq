@@ -1,3 +1,26 @@
+
+{{#each posts}}
+<div class="row">
+  <div class="col s12 m6">
+    <div class="card black darken-1">
+      <div class="card-content">
+        <span class="card-title"><a href="/post/{{id}}">{{song_title}}</a></span>
+        <span><h5>{{song_artist}}</h5></span>
+        <div>
+          <p>Review: ({{review}}) </p>
+          <p>Rating: ({{rating}})</p>
+          by {{user.username}} on
+          {{format_date created_at}}
+        </div>
+        <div class="meta">
+          {{upvotesCount}} upvote(s) | {{downvotesCount}} downvote(s) |
+          <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+
 <ol class="post-list">
   {{#each posts}}
   <li>
