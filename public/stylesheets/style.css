@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    color: white;
   }
   
   body, html {
@@ -167,7 +168,7 @@
   }
   
   .new-post-form input {
-    width: 300px;
+    width: 75%;
   }
   
   .edit-post-form {

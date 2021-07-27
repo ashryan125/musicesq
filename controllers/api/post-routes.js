@@ -101,6 +101,7 @@ router.post("/", withAuth, (req, res) => {
   Post.create({
     song_title: req.body.song_title,
     song_artist: req.body.song_artist,
+    song_url: req.body.song_url,
     review: req.body.review,
     rating: req.body.rating,
     user_id: req.session.user_id
