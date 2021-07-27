@@ -116,7 +116,7 @@
   }
   
   .btn-no-style {
-    background: none;
+    background:none;
     border: none;
     padding: 0;
     cursor: pointer;
@@ -129,10 +129,14 @@
   }
   
   .btn-no-style:hover {
-    background: none;
+    background : none;
     color: white;
   }
   
+  .home a:hover{
+    background : none;
+    color: white;
+  }
   .delete-post-btn {
     background-color: #ff643d;
     color:white 
@@ -203,6 +207,11 @@
     font-size: 110%;
   }
 
+  .edit{
+    border:white 2px solid;
+
+  }
+
   .nav-extended {
     margin: 7 px 0;
     padding-top: 15px;
@@ -216,7 +225,7 @@
   .page-footer{
     background-color: black;
   }
-  
+
   .footer-color{
     color: #EA706C;
   }
@@ -225,12 +234,21 @@
     color: #EA706C;
   }
 
- /*Media query for laptops and smaller screens*/
-@media screen and (max-width: 990px){
-  /* header {
-    padding-bottom: 0;
-    justify-content: center;
-    position: relative;
-    } */
-} 
-  
+  .signup-form{
+    width: 80vw;
+    margin-left:50px;
+    border: white 2px solid;
+    padding: 5px;
+  }
+
+  .login-form{
+    width: 80vw;
+    margin-left: -175px;
+    border: white 2px solid;
+    padding: 5px;
+    margin-top: 10px;
+  }
+
+  .btn-forms{
+    margin-left: 600px;
+  }
