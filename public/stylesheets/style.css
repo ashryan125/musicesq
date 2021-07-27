@@ -13,17 +13,18 @@
   
   a {
     text-decoration: none;
-    color: #225ca3;
+    color: white;
     font-weight: bold;
     transition: color .1s;
   }
   
   a:hover {
-    color: #3486eb;
+    color: white;
+    background-color: none;
   }
   
   button {
-    background-color: #225ca3;
+    background-color: #ff643d;
     border: 0;
     padding: 1%;
     color: white;
@@ -34,12 +35,13 @@
   }
   
   button:hover {
-    background-color: #3486eb;
+    background-color: #ff643d;
   }
   
   .post-list {
     margin: 0;
     padding: 0;
+    border: white 2px solid;
   }
   
   textarea, input {
@@ -50,7 +52,7 @@
   
   textarea:focus, input:focus {
     outline: none;
-    border: 1px solid #3486eb;
+    border: 2px solid white;
   }
   
   textarea {
@@ -98,7 +100,7 @@
     padding: 0;
     cursor: pointer;
     text-decoration: none;
-    color: #225ca3;
+    color: #ff643d;
     font-size: 100%;
     font-weight: bold;
     transition: color .1s;
@@ -107,15 +109,17 @@
   
   .btn-no-style:hover {
     background: none;
-    color: #3486eb;
+    color: white;
   }
   
   .delete-post-btn {
-    background-color: #d41414;
+    background-color: #ff643d;
+    color:white 
   }
   
   .delete-post-btn:hover {
     background-color: #ff643d;
+    color: white;
   }
   
   .post {
@@ -135,12 +139,12 @@
   }
   
   .upvote-btn {
-    background-color: #197d0f;
+    background-color: #ff643d;
     transition: background-color .1s;
   }
   
   .upvote-btn:hover {
-    background-color: #1f9c13;
+    background-color: #ff643d;
   }
   
   .comment-form {
@@ -201,3 +205,9 @@
   /* .card-content{
     border-radius: 1px solid white;
   } */
+  .edit{
+    border:white 2px solid;
+
+  }
+
+  
