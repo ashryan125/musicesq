@@ -4,14 +4,15 @@
     <article class="post">
       <div class="title">
         <a href="/post/{{id}}">{{song_title}}</a>
-        <span>({{song_artist}})</span>
-        <p>Rating: ({{rating}})</p>
-         <p>Review: ({{review}}) </p>
-         by {{user.username}} on
-        {{format_date created_at}} 
+        <span>{{song_artist}}</span>
+        <p><a href="{{song_url}}" target="_blank">click here to checkout the song!</a></p>
+        <p>Rating: {{rating}}</p>
+        <p>Review: {{review}} </p>
+        by {{user.username}} on
+        {{format_date created_at}}
       </div>
       <div class="meta">
-        {{upvotesCount}} upvote(s) | {{downvotesCount}} downvote(s)  | 
+        {{upvotesCount}} upvote(s) | {{downvotesCount}} downvote(s) |
         <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
       </div>
     </article>
