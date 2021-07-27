@@ -7,8 +7,8 @@
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    background-color: rgb(22, 19, 19);
-    color: #333;
+    background-color:black;
+    color:black;
   }
   
   a {
@@ -176,4 +176,21 @@
     justify-content: center;
     padding: 1%;
     font-size: 110%;
+  }
+
+  .nav-extended {
+    background-color: black;
+  }
+
+  .page-footer{
+    background-color: black;
+  }
+
+  .card-content, 
+ a{
+    color: #EA706C;
+  }
+
+  .card-content{
+    border-radius: 1px solid white;
   }

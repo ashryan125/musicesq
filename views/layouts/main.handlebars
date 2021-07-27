@@ -12,36 +12,34 @@
 
 <body>
     <div>
-        <header>
-            <nav class="nav-extended">
-                <div class="nav-wrapper">
-                    <a href="#" class="brand-logo">Beat-IT</a>
-                    {{#if loggedIn}}
+        <nav class="nav-extended">
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">Beat-IT</a>
+                {{#if loggedIn}}
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/">Home</a></li>
+                    <button id="logout" class="btn-no-style">logout</button>
+                </ul>
+            </div>
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a href="/dashboard">Dashboard</a></li>
+                    <li class="tab"><a href="/your-posts">Your Posts</a></li>
+                    <li class="tab disabled"><a href="/activity">Activity</a></li>
+                    <li class="tab"><a class="active" href="/settings">Settings</a></li>
+                    {{else}}
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="/">Home</a></li>
-                        <button id="logout" class="btn-no-style">logout</button>
+                        <li><a href="/login">Login/SignUp</a></li>
                     </ul>
-                </div>
-                <div class="nav-content">
-                    <ul class="tabs tabs-transparent">
-                        <li class="tab"><a href="/dashboard">Dashboard</a></li>
-                        <li class="tab"><a href="/your-posts">Your Posts</a></li>
-                        <li class="tab disabled"><a href="/activity">Activity</a></li>
-                        <li class="tab"><a class="active" href="/settings">Settings</a></li>
-                        {{else}}
-                        <ul id="nav-mobile" class="right hide-on-med-and-down">
-                            <li><a href="/login">Login/SignUp</a></li>
-                        </ul>
-                        {{/if}}
-                    </ul>
-                </div>
-            </nav>
-        </header>
+                    {{/if}}
+                </ul>
+            </div>
+        </nav>
         <main>
             {{{ body }}}
         </main>
-        <footer>
-            Thanks for visiting!
+        <footer class="page-footer">
+            <h4 class="white-text text-lighten-4">Thanks for visiting!</h4>
         </footer>
     </div>
     {{#if loggedIn}}
