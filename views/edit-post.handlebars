@@ -1,3 +1,18 @@
+
+<div class="edit">
+    <h3> Edit post</h3>
+    <form>
+        <div>
+            <input name="post-title" type="text" value="{{post.title}}" />
+        </div>
+        <div>
+            <input name="review" type="text" value="{{post.review}}" class="form-input" />
+        </div>
+        <button type="submit" class="delete-post-btn waves-effect waves-light btn">Save post</button>
+        <button type="button" class="delete-post-btn waves-effect waves-light btn">Delete post</button>
+    </form>
+</div>
+
 <article>
   <a href="/dashboard"> &larr; Back to dashboard</a>
   <h2>
@@ -69,3 +84,4 @@
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
 <script src="/javascript/comment.js"></script>
+
