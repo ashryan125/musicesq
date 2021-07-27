@@ -31,8 +31,8 @@ router.get("/:song", (req, res) => {
   let query = req.params.song
   spotifyApi.searchTracks(query, { limit: 5, type: 'track'} , function (err, data) {
     if (err) {
-      console.log("ERROR: " + err)
-
+      
+      return console.log("ERROR: " + err);
     }
 
     let respo = []
@@ -42,7 +42,7 @@ router.get("/:song", (req, res) => {
       let track = obj.name;
       let artistName = obj.artists[0].name;
       let extUrl = obj.external_urls;
-      
+
       respo.push({track, artistName, extUrl});
       //console.log(artistName);
       //resName.push(artistName);

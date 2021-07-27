@@ -68,6 +68,7 @@ async function apiCall(event) {
 
                 } else {
                     console.log('error');
+                    return;
                 }
             };
             request.send();
