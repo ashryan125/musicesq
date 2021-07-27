@@ -24,20 +24,21 @@
                     <button id="logout" class="btn-no-style ">logout</button>
                 </ul>
             </div>
-            <div class="nav-content">
-                <ul class="tabs tabs-transparent">
-                    <li class="tab"><a href="/dashboard">Dashboard</a></li>
-                    <li class="tab"><a href="/your-posts">Your Posts</a></li>
-                    <li class="tab"><a href="/activity">Activity</a></li>
-                    <li class="tab"><a href="/settings">Settings</a></li>
-                    {{else}}
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="/login">Login/SignUp</a></li>
+                <div class="nav-content">
+                    <ul class="tabs">
+                        <li class="tab"><a href="/dashboard">Dashboard</a></li>
+                        <li class="tab"><a href="/your-posts">Your Posts</a></li>
+                        <li class="tab"><a href="/activity">Activity</a></li>
+                        <li class="tab"><a href="/settings">Settings</a></li>
+                        {{else}}
+                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                            <li><a href="/login">Login/SignUp</a></li>
+                        </ul>
+                        {{/if}}
                     </ul>
-                    {{/if}}
-                </ul>
-            </div>
-        </nav>
+                </div>
+            </nav>
+        </header>
         <main>
             {{{ body }}}
         </main>

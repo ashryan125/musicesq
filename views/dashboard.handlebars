@@ -1,6 +1,29 @@
-<link rel="stylesheet" href="/stylesheet/autocomp.css">
+<link rel="stylesheet" href="/stylesheets/autocomp.css">
+
 <section>
   <h2>Create New Post</h2>
+  <div class="card black darken-1">
+    <div class="card-content">
+      <form class="new-post-form" autocomplete="off" action="/action_page.php">
+        <div id="form-form-form">
+          <div class="autocomplete" style="width:100%;" id="autocomplete">
+            <input id="searchTitleInput" name="songTitle" placeholder="Song Title">
+          </div>
+        </div>
+        <div>
+          <label for="song-artist">Song Artist</label>
+          <input id="song-artist" name="song-artist" />
+        </div>
+        <div>
+          <label for="song-url">Song Url</label>
+          <input id="song-url" name="song-url" />
+        </div>
+        <div>
+          <label for="review">Review (160 characters)</label>
+          <input type="text" id="review" name="review" />
+        </div>
+        
+        <h4>Rate your song!</h4>
 
   <form class="new-post-form " autocomplete="off" action="/action_page.php">
     <div id="form-form-form">
@@ -28,43 +51,52 @@
         <span>1</span>
       </label>
 
-      <label>
-        <input name="rating" type="radio" value="2" />
-        <span>2</span>
-      </label>
+          <label>
+            <input name="rating" type="radio" value="2" />
+            <span>2</span>
+          </label>
 
-      <label>
-        <input name="rating" type="radio" value="3" />
-        <span>3</span>
-      </label>
+          <label>
+            <input name="rating" type="radio" value="3" />
+            <span>3</span>
+          </label>
 
-      <label>
-        <input name="rating" type="radio" value="4" />
-        <span>4</span>
-      </label>
+          <label>
+            <input name="rating" type="radio" value="4" />
+            <span>4</span>
+          </label>
 
-      <label>
-        <input name="rating" type="radio" value="5" />
-        <span>5</span>
-      </label>
+          <label>
+            <input name="rating" type="radio" value="5" />
+            <span>5</span>
+          </label>
+        </div>
+        <button type="submit" class="btn" id="submit-form-button">Create</button>
     </div>
-    <button type="submit" class="btn" id="submit-form-button">Create</button>
+  </div>
   </form>
 </section>
 
-{{!-- {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
+  <div class="card black darken-1">
+    <div class="card-content">
+      {{#if posts.length}}
+      <section>
+        <h2>Your Posts</h2>
+        <ol>
+          {{#each posts as |post|}}
+          <li>
+            {{> post-info post}}
+            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+          </li>
+          {{/each}}
+        </ol>
+      </section>
+      {{/if}}
+
+    </div>
+  </div>
 </section>
-{{/if}} --}}
 
 <script src="/javascript/add-post.js"></script>
- <script src="/javascript/input.js"></script> 
+<script src="/javascript/input.js"></script>
