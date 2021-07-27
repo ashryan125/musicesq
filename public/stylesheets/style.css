@@ -182,15 +182,22 @@
     background-color: black;
   }
 
+  .nav-extended a { 
+    color: #EA706C;
+  }
+
   .page-footer{
     background-color: black;
   }
-
+  
+  .footer-color{
+    color: #EA706C;
+  }
   .card-content, 
  a{
     color: #EA706C;
   }
 
-  .card-content{
+  /* .card-content{
     border-radius: 1px solid white;
-  }
+  } */
