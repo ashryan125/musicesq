@@ -1,5 +1,6 @@
 let searchInput = document.getElementById("searchTitleInput");
 let artistNameInput = document.getElementById("song-artist");
+let artistUrlInput = document.getElementById("song-url");
 
 async function apiCall(event) {
     event.preventDefault;
@@ -55,7 +56,9 @@ async function apiCall(event) {
                             /*close the list of autocompleted values,
                             (or any other open lists of autocompleted values:*/
                             console.log(element.artistName)
+                            console.log(element.extUrl.spotify)
                             artistNameInput.value = element.artistName;
+                            artistUrlInput.value = element.extUrl.spotify;
                             closeAllLists();
                         });
 

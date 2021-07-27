@@ -35,16 +35,15 @@ router.get("/:song", (req, res) => {
 
     }
 
-    //console.log(obj)
     let respo = []
-    //let resName = []
-    //let resTrack =[]
     for (i=0;i <= 4; i++) {
       let obj = data.body.tracks.items[i];
+      //console.log(obj);
       let track = obj.name;
       let artistName = obj.artists[0].name;
-
-      respo.push({track, artistName});
+      let extUrl = obj.external_urls;
+      
+      respo.push({track, artistName, extUrl});
       //console.log(artistName);
       //resName.push(artistName);
     }
