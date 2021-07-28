@@ -1,27 +1,22 @@
-@import url(//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css);
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-h2,
-h3,
-h4 {
-  color: #ea706c;
+h2, h3, h4 {
+  color: #EA706C;
 }
 
 .tabs .tab {
-  margin: 0 16px;
+margin: 0 16px;
 }
 
-body,
-html {
+body, html {
   line-height: 1.5;
   font-family: sans-serif;
-  background-color: black;
-  color: white;
+  background-color:black;
+  color:white;
 }
 
 header {
@@ -32,10 +27,13 @@ header {
 .tabs {
   background-color: black;
   justify-content: center;
-  font-family: "Comfortaa", cursive;
 }
 
 .tab {
+  font-family: Comfortaa;
+  font-style: normal;
+font-weight: 300;
+font-display: swap;
   float: none;
   margin: 0 40px;
 }
@@ -44,7 +42,7 @@ a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  transition: color 0.1s;
+  transition: color .1s;
 }
 
 a:hover {
@@ -53,18 +51,18 @@ a:hover {
 }
 
 button {
-  background-color: #ea706c;
+  background-color: #EA706C;
   border: 0;
   padding: 1%;
   color: white;
   font-weight: bold;
-  transition: background-color 0.1s;
+  transition: background-color .1s;
   cursor: pointer;
   border-radius: 5px;
 }
 
 button:hover {
-  background-color: #ce4d49;
+  background-color: #EA706C;
 }
 
 .post-list {
@@ -73,8 +71,8 @@ button:hover {
   border: white 1px solid;
 }
 
-.line {
-  border-bottom: white 1px solid;
+.line{
+  border-bottom:white 1px solid;
 }
 
 .your-post-card {
@@ -82,19 +80,17 @@ button:hover {
   margin-bottom: 24px;
 }
 
-.border-line {
+.border-line{
   border: white 1px solid;
 }
 
-textarea,
-input {
-  padding: 0.5%;
+textarea, input {
+  padding: .5%;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
-textarea:focus,
-input:focus {
+textarea:focus, input:focus {
   outline: none;
   border: 1px solid white;
 }
@@ -140,41 +136,47 @@ main {
 }
 
 .btn-no-style {
-  background: none;
+  background:none;
   border: none;
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #ea706c;
+  color: #EA706C;
   font-size: 20px;
   font-weight: bold;
-  transition: color 0.1s;
+  transition: color .1s;
   margin-left: 16px;
-  font-family: "Comfortaa", cursive;
+
+  font-family:'Comfortaa', cursive; 
+
 }
 
 .btn-no-style:hover {
-  background: none;
+  background : none;
   color: white;
 }
 
-.home a:hover {
-  background: none;
+
+
+.home a:hover{
+  background : none;
   color: white;
 }
 
-.home a {
-  font-size: 22px;
-  font-family: "Comfortaa", cursive;
+.home a{
+ font-size: 22px;
+
+ font-family:'Comfortaa', cursive;
+
 }
 
 .delete-post-btn {
-  background-color: #ea706c;
-  color: white;
+  background-color: #EA706C;
+  color:white 
 }
 
 .delete-post-btn:hover {
-  background-color: #ce4d49;
+  background-color: #EA706C;
   color: white;
 }
 
@@ -192,17 +194,17 @@ main {
 .edit-link {
   display: block;
   margin: 8px 16px;
-  color: #ea706c;
+  color:  #EA706C;
   width: 20%;
 }
 
 .upvote-btn {
-  background-color: #ea706c;
-  transition: background-color 0.1s;
+  background-color: #EA706C;
+  transition: background-color .1s;
 }
 
 .upvote-btn:hover {
-  background-color: #ce4d49;
+  background-color: #EA706C;
 }
 
 .text {
@@ -218,8 +220,8 @@ main {
 
 .comment .meta {
   font-size: 90%;
-  margin-bottom: 0.5%;
-  opacity: 0.6;
+  margin-bottom: .5%;
+  opacity: .6;
   color: white;
 }
 
@@ -239,8 +241,8 @@ footer {
   font-size: 110%;
 }
 
-.edit {
-  border: white 1px solid;
+.edit{
+  border:white 1px solid;
 }
 
 .nav-extended {
@@ -254,92 +256,51 @@ footer {
   text-align: center;
 }
 
-.nav-extended a {
-  color: #ea706c;
+.nav-extended a { 
+  color: #EA706C;
 }
 
-.page-footer {
+.page-footer{
   background-color: black;
 }
 
-.footer-color {
-  color: #ea706c;
+.footer-color{
+  color: #EA706C;
 }
-.card-content,
-a {
+.card-content, 
+a{
   color: white;
   padding-bottom: 16px;
 }
 
-.nav-wrapper img {
+.nav-wrapper img{
   width: 10%;
 }
 
 .brand-logo {
-  font-family: "Pacifico", cursive;
+
+  font-family:'Pacifico', cursive;
   font-style: italic;
+
 }
 
-.password {
-  color: white;
+.password{
+ color: white;
 }
 
-.login a {
-  font-size: 20px;
+.login a{
+ font-size: 20px;
 }
 
 .title a {
-  font-size: 20px;
+ font-size: 20px;
 }
 
 .rate {
-  display: flex;
-  justify-content: space-between;
+ display: flex;
+ justify-content: space-between;
 }
 
-/* CUSTOM RADIO BUTTONS */
+@media screen and (max-width: 996px){
 
-/* remove materialize radio */
-
-/* [type="radio"]:not(:checked) + label::before,
-[type="radio"]:not(:checked) + label::after {
-  border: 0px;
-}
-
-[type="radio"]:checked + label::after,
-.with-gap[type="radio"]:checked + label::after {
-  z-index: -999;
-} */
-
-input[type=radio].with-font {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-  
-input[type=radio].with-font + label:before {
-  font-family: FontAwesome;
-  display: inline-block;
-  content: "\f1db";
-  letter-spacing: 10px;
-  font-size: 1.2em;
-  color: #535353;
-}
-
-input[type=radio].with-font:checked + label:before {
-  content: "\f00c";
-  font-size: 1.2em;
-  color: rgb(1, 250, 1);
-  letter-spacing: 5px;
-  width: 35px;
-}
-
-input[type=radio].with-font:focus + label:before {
-  font-weight: bold;
-  color:orange;
 }
