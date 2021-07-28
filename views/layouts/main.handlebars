@@ -7,6 +7,8 @@
     <title>Beat-IT</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/style.css">
 
     <link rel="stylesheet" href="/stylesheets/autocomp.css">
@@ -18,12 +20,13 @@
         <header>
             <nav class="nav-extended">
                 <div class="nav-wrapper">
-                    <img src="/images/beatItLogo-01.png" alt="beat-it-logo" />
+                   <a href ="/"><img src="/images/beatItLogo-01.png" alt="beat-it-logo" /></a> 
                     <a href="/" class="brand-logo">Beat-IT</a>
+                    
                     {{#if loggedIn}}
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li class="home"><a href="/">Home</a></li>
-                        <button id="logout" class="btn-no-style ">Logout</button>
+                      <li>  <button id="logout" class="btn-no-style ">Logout</button></li>
                     </ul>
                 </div>
                 <div class="nav-content">
@@ -33,9 +36,12 @@
                         <li class="tab"><a href="/activity">Activity</a></li>
                         <li class="tab"><a href="/settings">Settings</a></li>
                         {{else}}
+                        
                         <ul id="nav-mobile" class="right hide-on-med-and-down">
+                             <li class="home"><a href="/">Home</a></li>
                             <li class="login"><a href="/login">Login/SignUp</a></li>
                         </ul>
+
                         {{/if}}
                     </ul>
                 </div>

@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const { User, Post, Votes, Comment } = require("../../models");
-const withAuth = require("../../utils/auth");
 
 // GET /api/users
 router.get("/", (req, res) => {
@@ -127,12 +126,27 @@ router.put("/:id", (req, res) => {
     });
 });
 
-// DELETE /api/users/1
+
+
+
+// USER LOG OUT
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  }
+  else {
+    res.status(404).end();
+  }
+});
+
+
 router.delete("/:id", (req, res) => {
   User.destroy({
     where: {
       id: req.params.id,
-    },
+    }
   })
     .then((dbUserData) => {
       if (!dbUserData) {
@@ -145,18 +159,6 @@ router.delete("/:id", (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-});
-
-// USER LOG OUT
-router.post('/logout', (req, res) => {
-  if (req.session.loggedIn) {
-    req.session.destroy(() => {
-      res.status(204).end();
-    });
-  }
-  else {
-    res.status(404).end();
-  }
 });
 
 module.exports = router;
