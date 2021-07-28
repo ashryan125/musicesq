@@ -8,7 +8,7 @@
             <div class="title">
               <a href="/post/{{post.id}}">{{post.song_title}} </a>
               <div class="rate">
-                <span>({{post.song_artist}})</span>
+                <span>{{post.song_artist}}</span>
                 <p>Rating: {{post.rating}}</p>
               </div>
             </div>
@@ -22,10 +22,10 @@
         </div>
         <div class="meta">
           {{post.upvotesCount}}
-          upvote(s) |
+          upvotes |
           {{post.downvotesCount}}
-          downvote(s) |
-          <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+          downvotes |
+          <a href="/post/{{post.id}}">{{post.comments.length}} comments</a>
         </div>
       </article>
 

@@ -46,7 +46,7 @@ input[type=submit] {
 
 .inputItem :hover {
   /*when hovering an item:*/
-  color: #efa6ff;
+  color: #EA706C;
 }
 
 .autocomplete-active {

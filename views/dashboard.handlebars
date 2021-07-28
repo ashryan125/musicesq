@@ -26,7 +26,7 @@
         <h4>Rate your song!</h4>
         <div class="ratingValue" name="ratingValue">
           <label>
-          <input name="rating" type="radio" value="1"/>
+            <input name="rating" type="radio" value="1" />
             <span><i class="material-icons">music_note</i></span>
           </label>
 
@@ -56,24 +56,6 @@
   </form>
 </section>
 
-<section>
-  <h2>Your Posts</h2>
-  <div class="card black darken-1">
-    <div class="card-content">
-      {{#if posts.length}}
-        {{#each posts as |post|}}
-        <div>
-          {{> post-info post}}
-        </div>
-        <br>
-        <div>
-          <a href="/dashboard/edit/{{post.id}}" class="edit-link"><h6>Edit post</h6></a>
-        </div>
-        {{/each}}
-      {{/if}}
-    </div>
-  </div>
-</section>
 
 <script src="/javascript/add-post.js"></script>
 <script src="/javascript/input.js"></script>

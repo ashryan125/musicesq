@@ -9,18 +9,18 @@
           <span>
             <h5>{{song_artist}}</h5>
           </span>
-          <p>Rating: ({{rating}})</p>
+          <p>Rating: {{rating}}</p>
         </div>
       </div>
       <br>
       <div>
-        <p>Review: ({{review}}) </p>
+        <p>Review: {{review}} </p>
         by {{user.username}} on
         {{format_date created_at}}
       </div>
       <div class="meta">
-        {{upvotesCount}} upvote(s) | {{downvotesCount}} downvote(s) |
-        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+        {{upvotesCount}} upvotes | {{downvotesCount}} downvotes |
+        <a href="/post/{{id}}">{{comments.length}} comments</a>
       </div>
     </div>
   </div>
@@ -38,7 +38,7 @@
           <span>
             <h5>{{song_artist}}</h5>
           </span>
-          <p>Rating: ({{rating}})</p>
+          <p>Rating: {{rating}}</p>
         </div>
         <p><a href="{{song_url}}" target="_blank">click here to checkout the song!</a></p>
       </div>
@@ -49,8 +49,8 @@
         {{format_date created_at}}
       </div>
       <div class="meta">
-        {{upvotesCount}} upvote(s) | {{downvotesCount}} downvote(s) |
-        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+        {{upvotesCount}} upvotes | {{downvotesCount}} downvotes |
+        <a href="/post/{{id}}">{{comments.length}} comments</a>
       </div>
     </div>
   </div>
