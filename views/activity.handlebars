@@ -2,12 +2,14 @@
   <h3>Your Activity logs</h3>
   {{#each posts}}
   <div class="card black darken-1">
-    <div class="card-content">
+    <div class="card-content border-line">
       <div class="line">
         <a href="/post/{{id}}">{{song_title}}</a>
-        <span>{{song_artist}}</span>
-        <p><a href="{{song_url}}" target="_blank">click here to checkout the song!</a></p>
-        <p>Rating: {{rating}}</p>
+        <span class="artist">[{{song_artist}}]</span>
+        <div class="rate">
+          <p><a href="{{song_url}}" target="_blank">click here to checkout the song!</a></p>
+          <p>Rating: {{rating}}</p>
+        </div>
       </div>
       <br>
       <div>
@@ -15,9 +17,9 @@
         by {{user.username}} on
         {{format_date created_at}}
       </div>
-      <div class="meta">
-        {{upvotesCount}} upvote(s) | {{downvotesCount}} downvote(s) |
-        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+      <div class="rate">
+        <a href="/post/{{id}}">{{comments.length}} comments</a>
+        {{upvotesCount}} Upvotes | {{downvotesCount}} Downvotes
       </div>
     </div>
   </div>
