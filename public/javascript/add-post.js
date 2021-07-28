@@ -34,7 +34,7 @@ async function newFormHandler(event) {
     });
     if (response.ok) {
       console.log("it worked")
-      document.location.replace('/dashboard');
+      document.location.replace('/your-posts');
     } else {
         console.log(songTitle, "\n", songArtist, "\n", review, "\n", rating),
       alert(response.statusText);
