@@ -17,13 +17,12 @@
         <header>
             <nav class="nav-extended">
                 <div class="nav-wrapper">
-
                     <img src="/images/beatItLogo-01.png" alt="beat-it-logo" />
                     <a href="/" class="brand-logo">Beat-IT</a>
                     {{#if loggedIn}}
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li class="home"><a href="/">Home</a></li>
-                        <button id="logout" class="btn-no-style ">logout</button>
+                        <button id="logout" class="btn-no-style ">Logout</button>
                     </ul>
                 </div>
                 <div class="nav-content">
@@ -34,7 +33,7 @@
                         <li class="tab"><a href="/settings">Settings</a></li>
                         {{else}}
                         <ul id="nav-mobile" class="right hide-on-med-and-down">
-                            <li><a href="/login">Login/SignUp</a></li>
+                            <li class="login"><a href="/login">Login/SignUp</a></li>
                         </ul>
                         {{/if}}
                     </ul>

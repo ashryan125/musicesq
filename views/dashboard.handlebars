@@ -17,19 +17,18 @@
         <div>
           <label for="song-url">Song Url</label>
           <input type="text" id="song-url" name="song-url" />
-        
         </div>
         <div>
           <label for="review">Review (160 characters)</label>
           <input type="text" id="review" name="review" />
         </div>
-        
+
         <h4>Rate your song!</h4>
-    <div class="ratingValue" name="ratingValue">
-      <label>
-        <input name="rating" type="radio" value="1" />
-        <span>1</span>
-      </label>
+        <div class="ratingValue" name="ratingValue">
+          <label>
+            <input name="rating" type="radio" value="1" />
+            <span>1</span>
+          </label>
 
           <label>
             <input name="rating" type="radio" value="2" />
@@ -51,29 +50,27 @@
             <span>5</span>
           </label>
         </div>
-        <button type="submit" class="btn" id="submit-form-button">Create</button>
+        <button type="submit" class="waves-effect red lighten-2 btn" id="submit-form-button">Create</button>
     </div>
   </div>
   </form>
 </section>
 
 <section>
+  <h2>Your Posts</h2>
   <div class="card black darken-1">
     <div class="card-content">
       {{#if posts.length}}
-      <section>
-        <h2>Your Posts</h2>
-        <ol>
-          {{#each posts as |post|}}
-          <li>
-            {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-          </li>
-          {{/each}}
-        </ol>
-      </section>
+        {{#each posts as |post|}}
+        <div>
+          {{> post-info post}}
+        </div>
+        <br>
+        <div>
+          <a href="/dashboard/edit/{{post.id}}" class="edit-link"><h6>Edit post</h6></a>
+        </div>
+        {{/each}}
       {{/if}}
-
     </div>
   </div>
 </section>
