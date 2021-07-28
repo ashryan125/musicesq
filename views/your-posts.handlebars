@@ -1,19 +1,18 @@
-{{!-- <section>
+<section>
+  <h2>Your Posts</h2>
   <div class="card black darken-1">
     <div class="card-content">
       {{#if posts.length}}
-      <section>
-        <h2>Your Posts</h2>
-        {{#each posts as |post|}}
-        <div>
-          {{> post-info post}}
-        </div>
-        <div>
-          <a href="/dashboard/edit/{{post.id}}" class="edit-link"><h6>Edit post</h6></a>
-        </div>
-        {{/each}}
-      </section>
+      {{#each posts as |post|}}
+      <div class="your-post-card">
+        {{> post-info post}}
+        <a href="/dashboard/edit/{{post.id}}" class="edit-link">
+          <h6>Edit post</h6>
+        </a>
+      </div>
+
+      {{/each}}
       {{/if}}
     </div>
   </div>
-</section> --}}
+</section>

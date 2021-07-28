@@ -65,11 +65,7 @@ Post.init(
     },
     song_url: {
       type: DataTypes.STRING,
-<<<<<<< HEAD
-      allowNull: false,
-=======
       allowNull: true,
->>>>>>> 05e6972b6ea1b1e39e1a132de64225cd5d2230c7
     },
     review: {
         type: DataTypes.STRING(160),

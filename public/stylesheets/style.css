@@ -1,24 +1,20 @@
 * {
     box-sizing: border-box;
-<<<<<<< HEAD
-    color: white;
-=======
     padding: 0;
     margin: 0;
   }
 
   h2, h3, h4 {
     color: #EA706C;
->>>>>>> 05e6972b6ea1b1e39e1a132de64225cd5d2230c7
   }
   
+  .tabs .tab {
+  margin: 0 16px;
+  }
+
   body, html {
     line-height: 1.5;
     font-family: sans-serif;
-<<<<<<< HEAD
-    background-color: rgb(0, 0, 0);
-    color: #333;
-=======
     background-color:black;
     color:white;
   }
@@ -30,7 +26,12 @@
 
   .tabs {
     background-color: black;
->>>>>>> 05e6972b6ea1b1e39e1a132de64225cd5d2230c7
+    justify-content: center;
+  }
+
+  .tab {
+    float: none;
+    margin: 0 40px;
   }
   
   a {
@@ -63,16 +64,20 @@
   .post-list {
     margin: 0;
     padding: 0;
-    border: white 2px solid;
+    border: white 1px solid;
   }
 
   .line{
-    border-bottom:blanchedalmond 1px solid;
+    border-bottom:white 1px solid;
   }
 
-  .card-content{
-    border: white 2px solid;
+  .your-post-card {
+    border: white 1px solid;
+    margin-bottom: 24px;
   }
+  /* .card-content{
+
+  } */
   
   textarea, input {
     padding: .5%;
@@ -82,7 +87,7 @@
   
   textarea:focus, input:focus {
     outline: none;
-    border: 2px solid white;
+    border: 1px solid white;
   }
   
   textarea {
@@ -131,7 +136,7 @@
     padding: 0;
     cursor: pointer;
     text-decoration: none;
-    color: #ff643d;
+    color: #EA706C;
     font-size: 100%;
     font-weight: bold;
     transition: color .1s;
@@ -157,12 +162,12 @@
   }
 
   .delete-post-btn {
-    background-color: #ff643d;
+    background-color: #EA706C;
     color:white 
   }
   
   .delete-post-btn:hover {
-    background-color: #ff643d;
+    background-color: #EA706C;
     color: white;
   }
   
@@ -179,16 +184,18 @@
   
   .edit-link {
     display: block;
-    margin: -1.5% 0 2% 0;
+    margin: 8px 16px;
+    color:  #EA706C;
+    width: 20%;
   }
   
   .upvote-btn {
-    background-color: #ff643d;
+    background-color: #EA706C;
     transition: background-color .1s;
   }
   
   .upvote-btn:hover {
-    background-color: #ff643d;
+    background-color: #EA706C;
   }
   
   .comment-form {
@@ -231,13 +238,18 @@
   }
 
   .edit{
-    border:white 2px solid;
+    border:white 1px solid;
   }
 
   .nav-extended {
     margin: 7 px 0;
     padding-top: 15px;
     background-color: black;
+  }
+
+  .nav-content {
+    float: none;
+    text-align: center;
   }
 
   .nav-extended a { 
@@ -253,7 +265,8 @@
   }
   .card-content, 
  a{
-    color: #EA706C;
+    color: white;
+    padding-bottom: 16px;
   }
 
   .nav-wrapper img{

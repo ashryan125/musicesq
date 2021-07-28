@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-<article class="post">
-  <div class="title">
-    <a href="/post/{{post.id}}">{{post.song_title}}</a>
-    <p>{{post.song_artist}}</p>
-    <p><a href="{{song_url}}" target="_blank">click here to checkout the song!</a></p>
-    <p>Rating: {{post.rating}}</p>
-    <p>Review: {{post.review}} </p>
-    by
-    {{post.user.username}}
-    on
-    {{format_date post.created_at}} 
-  </div>
-  <div class="meta">
-    {{post.upvotesCount}}
-    upvote(s) |
-    {{post.downvotesCount}}
-    downvote(s) |
-    <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
-  </div>
-</article>
-=======
 <section>
   <h3>Add Comments</h3>
   <div class="card black darken-1">
@@ -30,7 +8,7 @@
             <div class="title">
               <a href="/post/{{post.id}}">{{post.song_title}} </a>
               <div class="rate">
-                <span>({{post.song_artist}})</span>
+                <span>{{post.song_artist}}</span>
                 <p>Rating: {{post.rating}}</p>
               </div>
             </div>
@@ -44,13 +22,12 @@
         </div>
         <div class="meta">
           {{post.upvotesCount}}
-          upvote(s) |
+          upvotes |
           {{post.downvotesCount}}
-          downvote(s) |
-          <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+          downvotes |
+          <a href="/post/{{post.id}}">{{post.comments.length}} comments</a>
         </div>
       </article>
->>>>>>> 05e6972b6ea1b1e39e1a132de64225cd5d2230c7
 
       {{#if loggedIn}}
       <form class="comment-form">

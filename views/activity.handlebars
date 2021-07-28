@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-<section>
-    <a href="/dashboard">Dashboard</a>
-    <a href="/settings">Settings</a>
-    <a href="/your-posts">Your Posts</a>
-    <a href="/activity">Activity</a>
-
-    <div>
-        <ol class="post-list">
-            {{#each posts}}
-            <li>
-                <article class="post">
-                    <div class="title">
-                        <a href="{{song_title}}" target="_blank">{{song_title}</a>
-                        <p> Song artist: {{song_artist}}</p>
-                        <p><a href="{{song_url}}" target="_blank">click here to checkout the song!</a></p>
-                        <p>Rating: {{rating}}</p>
-                        <p>Review: {{review}} </p>
-                        by {{user.username}} on
-                        {{created_at}}
-                    </div>
-                    <div class="meta">
-                        {{upvotesCount}} upvote(s) | {{downvotesCount}} downvote(s) |
-                        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
-                    </div>
-                </article>
-            </li>
-            {{/each}}
-        </ol>
-=======
 {{!-- <section>
   <h3>Your Activity logs</h3>
   {{#each posts}}
@@ -49,7 +19,6 @@
         {{upvotesCount}} upvote(s) | {{downvotesCount}} downvote(s) |
         <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
       </div>
->>>>>>> 05e6972b6ea1b1e39e1a132de64225cd5d2230c7
     </div>
   </div>
   {{/each}}
