@@ -1,33 +1,32 @@
 async function deleteUser(event) {
   event.preventDefault();
 
-  const id = window.location.toString().split("/")[
-    window.location.toString().split("/").length - 1
-  ];
+  if (
+    window.confirm(
+      "You sure? Once deleted all posts/activity will also be deleted"
+    )
+  ) {
+    // const id = window.location.toString().split("/")[
+    //   window.location.toString().split("/").length - 1
+    // ];
 
-  //   function confirmDialog(msg) {
-  //     return new Promise(function (resolve, reject) {
-  //       let confirmed = window.confirm(msg);
+    const id = req.session.user_id;
 
-  //       return confirmed ? resolve(true) : reject(false);
-  //     });
-  //   }
+    console.log(id);
 
-  //   confirmDialog("Are you sure you want to delete your account?")
-  //     .then(() => doYourDeleteAction(task.id))
-  //     .catch((err) => alert("Unable to delete!"));
+    // const response = await fetch(`/api/users/${id}`, {
+    //   method: "DELETE",
+    // });
 
-  const response = await fetch(`/api/users/${id}`, {
-    method: "DELETE",
-  });
-
-  if (response.ok) {
-    document.location.replace("/homepage/");
-  } else {
-    alert(response.statusText);
+    if (response.ok) {
+      document.location.replace("/homepage/");
+    } else {
+      alert(response.statusText);
+    }
   }
 }
 
 document
   .querySelector(".delete-user-btn")
   .addEventListener("click", deleteUser);
+
