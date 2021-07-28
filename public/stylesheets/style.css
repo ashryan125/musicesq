@@ -27,7 +27,11 @@
   .tabs {
     background-color: black;
     justify-content: center;
-    font-family:'Comfortaa', cursive;
+    font-family: Comfortaa;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+
   }
 
   .tab {
@@ -143,7 +147,10 @@
     font-weight: bold;
     transition: color .1s;
     margin-left: 16px;
-    font-family:'Comfortaa', cursive; 
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
   }
   
   .btn-no-style:hover {
@@ -160,7 +167,10 @@
 
   .home a{
    font-size: 22px;
-   font-family:'Comfortaa', cursive;
+   font-family: Comfortaa;
+   font-style: normal;
+   font-weight: 300;
+   font-display: swap;
   }
 
   .delete-post-btn {
@@ -271,8 +281,11 @@
   }
 
   .brand-logo {
-    font-family:'Pacifico', cursive;
-    font-style: italic;
+    font-family: 'Pacifico',cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  
   }
 
  .password{
