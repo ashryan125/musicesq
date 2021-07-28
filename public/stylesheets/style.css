@@ -4,7 +4,7 @@
     margin: 0;
   }
 
-  h2, h4 {
+  h2, h3, h4 {
     color: #EA706C;
   }
   
@@ -79,6 +79,7 @@
   textarea {
     min-width: 40%;
     min-height: 100px;
+    color: white;
   }
   
   form > div {
@@ -132,11 +133,20 @@
     background : none;
     color: white;
   }
+
+  .btn-no-style{
+    font-size: 20px;
+  }
   
   .home a:hover{
     background : none;
     color: white;
   }
+
+  .home a{
+   font-size: 20px;
+  }
+
   .delete-post-btn {
     background-color: #ff643d;
     color:white 
@@ -155,7 +165,7 @@
   .post .title span {
     font-style: italic;
     font-size: 90%;
-    color: #7d7d7d;
+    color: white;
   }
   
   .edit-link {
@@ -174,21 +184,25 @@
   
   .comment-form {
     margin-bottom: 5%;
+    border: 1px solid white;
+  }
+
+  .text {
+    color: white;
+    font-size: 20px;
   }
   
   .comment {
     padding: 1%;
     margin-bottom: 1%;
-  }
-  
-  .comment:nth-child(odd) {
-    background-color: #fff5eb;
+    color: white;
   }
   
   .comment .meta {
     font-size: 90%;
     margin-bottom: .5%;
     opacity: .6;
+    color: white;
   }
   
   .new-post-form input {
@@ -209,7 +223,6 @@
 
   .edit{
     border:white 2px solid;
-
   }
 
   .nav-extended {
@@ -237,6 +250,25 @@
   .nav-wrapper img{
     width: 10%;
   }
+
+  .brand-logo {
+    font-family: cursive;
+  }
+
  .password{
    color: white;
  }
+
+ .login a{
+   font-size: 20px;
+ }
+
+ .title a {
+   font-size: 20px;
+ }
+
+ .rate {
+   display: flex;
+   justify-content: space-between;
+ }
+ 
