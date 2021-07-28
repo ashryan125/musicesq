@@ -5,39 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beat-IT</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/style.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="/stylesheets/autocomp.css">
   
+=======
+
+    <link rel="stylesheet" href="/stylesheets/autocomp.css">
+
+>>>>>>> 05e6972b6ea1b1e39e1a132de64225cd5d2230c7
 </head>
 
 <body>
-      <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
     <div>
         <header>
-            <h1>
-                <a href="/">Beat-IT</a>
-            </h1>
-            <nav>
-                {{#if loggedIn}}
-                <a href="/">Home</a>
-                <a href="/dashboard">Dashboard</a>
-                <button id="logout" class="btn-no-style">logout</button>
-               {{else}}
-                <a href="/login">Login/SignUp</a>
-                 {{/if}}
+            <nav class="nav-extended">
+                <div class="nav-wrapper">
+                    <img src="/images/beatItLogo-01.png" alt="beat-it-logo" />
+                    <a href="/" class="brand-logo">Beat-IT</a>
+                    {{#if loggedIn}}
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li class="home"><a href="/">Home</a></li>
+                        <button id="logout" class="btn-no-style ">Logout</button>
+                    </ul>
+                </div>
+                <div class="nav-content">
+                    <ul class="tabs">
+                        <li class="tab"><a href="/dashboard">Dashboard</a></li>
+                        <li class="tab"><a href="/your-posts">Your Posts</a></li>
+                        <li class="tab"><a href="/activity">Activity</a></li>
+                        <li class="tab"><a href="/settings">Settings</a></li>
+                        {{else}}
+                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                            <li class="login"><a href="/login">Login/SignUp</a></li>
+                        </ul>
+                        {{/if}}
+                    </ul>
+                </div>
             </nav>
         </header>
         <main>
             {{{ body }}}
         </main>
-        <footer>
-            Thanks for visiting!
+        <footer class="page-footer">
+            <h4 class="footer-color">Thanks for visiting!</h4>
         </footer>
     </div>
-{{#if loggedIn}}
-      <script src="/javascript/logout.js"></script>
- {{/if}}
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>

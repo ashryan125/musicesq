@@ -1,22 +1,19 @@
-<section>
-    <a href="/dashboard">Dashboard</a>
-    <a href="/settings">Settings</a>
-    <a href="/your-posts">Your Posts</a>
-    <a href="/activity">Activity</a>
-
-    <div>
-        {{#if posts.length}}
-        <section>
-            <h2>Your Posts</h2>
-            <ol>
-                {{#each posts as |post|}}
-                <li>
-                    {{> post-info post}}
-                    <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-                </li>
-                {{/each}}
-            </ol>
-        </section>
-        {{/if}}
+{{!-- <section>
+  <div class="card black darken-1">
+    <div class="card-content">
+      {{#if posts.length}}
+      <section>
+        <h2>Your Posts</h2>
+        {{#each posts as |post|}}
+        <div>
+          {{> post-info post}}
+        </div>
+        <div>
+          <a href="/dashboard/edit/{{post.id}}" class="edit-link"><h6>Edit post</h6></a>
+        </div>
+        {{/each}}
+      </section>
+      {{/if}}
     </div>
-</section>
+  </div>
+</section> --}}

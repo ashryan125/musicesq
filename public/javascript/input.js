@@ -16,7 +16,11 @@ async function apiCall(event) {
         if (searchData.length) {
 
             var request = new XMLHttpRequest();
+<<<<<<< HEAD
             request.open('GET', `/api/input/${searchData}`, true);
+=======
+            request.open('GET', `http://localhost:3001/api/input/${searchData}`, true);
+>>>>>>> 05e6972b6ea1b1e39e1a132de64225cd5d2230c7
             request.onload = function () {
                 // Begin accessing JSON data here
                 let data = this.response;

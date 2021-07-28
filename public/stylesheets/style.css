@@ -1,30 +1,52 @@
 * {
     box-sizing: border-box;
+<<<<<<< HEAD
     color: white;
+=======
+    padding: 0;
+    margin: 0;
+  }
+
+  h2, h3, h4 {
+    color: #EA706C;
+>>>>>>> 05e6972b6ea1b1e39e1a132de64225cd5d2230c7
   }
   
   body, html {
-    height: 100%;
-    padding: 0;
-    margin: 0;
+    line-height: 1.5;
     font-family: sans-serif;
+<<<<<<< HEAD
     background-color: rgb(0, 0, 0);
     color: #333;
+=======
+    background-color:black;
+    color:white;
+  }
+  
+  header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tabs {
+    background-color: black;
+>>>>>>> 05e6972b6ea1b1e39e1a132de64225cd5d2230c7
   }
   
   a {
     text-decoration: none;
-    color: #225ca3;
+    color: white;
     font-weight: bold;
     transition: color .1s;
   }
   
   a:hover {
-    color: #3486eb;
+    color: white;
+    background-color: none;
   }
   
   button {
-    background-color: #225ca3;
+    background-color: #EA706C;
     border: 0;
     padding: 1%;
     color: white;
@@ -35,12 +57,21 @@
   }
   
   button:hover {
-    background-color: #3486eb;
+    background-color: #EA706C;
   }
   
   .post-list {
     margin: 0;
     padding: 0;
+    border: white 2px solid;
+  }
+
+  .line{
+    border-bottom:blanchedalmond 1px solid;
+  }
+
+  .card-content{
+    border: white 2px solid;
   }
   
   textarea, input {
@@ -51,12 +82,13 @@
   
   textarea:focus, input:focus {
     outline: none;
-    border: 1px solid #3486eb;
+    border: 2px solid white;
   }
   
   textarea {
     min-width: 40%;
     min-height: 100px;
+    color: white;
   }
   
   form > div {
@@ -94,12 +126,12 @@
   }
   
   .btn-no-style {
-    background: none;
+    background:none;
     border: none;
     padding: 0;
     cursor: pointer;
     text-decoration: none;
-    color: #225ca3;
+    color: #ff643d;
     font-size: 100%;
     font-weight: bold;
     transition: color .1s;
@@ -107,16 +139,31 @@
   }
   
   .btn-no-style:hover {
-    background: none;
-    color: #3486eb;
+    background : none;
+    color: white;
+  }
+
+  .btn-no-style{
+    font-size: 20px;
   }
   
+  .home a:hover{
+    background : none;
+    color: white;
+  }
+
+  .home a{
+   font-size: 20px;
+  }
+
   .delete-post-btn {
-    background-color: #d41414;
+    background-color: #ff643d;
+    color:white 
   }
   
   .delete-post-btn:hover {
     background-color: #ff643d;
+    color: white;
   }
   
   .post {
@@ -127,7 +174,7 @@
   .post .title span {
     font-style: italic;
     font-size: 90%;
-    color: #7d7d7d;
+    color: white;
   }
   
   .edit-link {
@@ -136,31 +183,35 @@
   }
   
   .upvote-btn {
-    background-color: #197d0f;
+    background-color: #ff643d;
     transition: background-color .1s;
   }
   
   .upvote-btn:hover {
-    background-color: #1f9c13;
+    background-color: #ff643d;
   }
   
   .comment-form {
     margin-bottom: 5%;
+    border: 1px solid white;
+  }
+
+  .text {
+    color: white;
+    font-size: 20px;
   }
   
   .comment {
     padding: 1%;
     margin-bottom: 1%;
-  }
-  
-  .comment:nth-child(odd) {
-    background-color: #fff5eb;
+    color: white;
   }
   
   .comment .meta {
     font-size: 90%;
     margin-bottom: .5%;
     opacity: .6;
+    color: white;
   }
   
   .new-post-form input {
@@ -178,3 +229,55 @@
     padding: 1%;
     font-size: 110%;
   }
+
+  .edit{
+    border:white 2px solid;
+  }
+
+  .nav-extended {
+    margin: 7 px 0;
+    padding-top: 15px;
+    background-color: black;
+  }
+
+  .nav-extended a { 
+    color: #EA706C;
+  }
+
+  .page-footer{
+    background-color: black;
+  }
+
+  .footer-color{
+    color: #EA706C;
+  }
+  .card-content, 
+ a{
+    color: #EA706C;
+  }
+
+  .nav-wrapper img{
+    width: 10%;
+  }
+
+  .brand-logo {
+    font-family: cursive;
+  }
+
+ .password{
+   color: white;
+ }
+
+ .login a{
+   font-size: 20px;
+ }
+
+ .title a {
+   font-size: 20px;
+ }
+
+ .rate {
+   display: flex;
+   justify-content: space-between;
+ }
+ 

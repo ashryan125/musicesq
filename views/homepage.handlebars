@@ -1,5 +1,7 @@
-<ol class="post-list">
+<section>
+  <h3>Homepage</h3>
   {{#each posts}}
+<<<<<<< HEAD
   <li>
     <article class="post">
       <div class="title">
@@ -7,6 +9,51 @@
         <span>{{song_artist}}</span>
         <p><a href="{{song_url}}" target="_blank">click here to checkout the song!</a></p>
         <p>Rating: {{rating}}</p>
+=======
+  <div class="card black darken-1">
+    <div class="card-content">
+      <div class="line">
+        <span class="card-title"><a href="/post/{{id}}">{{song_title}}</a></span>
+        <div class="rate">
+          <span>
+            <h5>{{song_artist}}</h5>
+          </span>
+          <p>Rating: ({{rating}})</p>
+        </div>
+      </div>
+      <br>
+      <div>
+        <p>Review: ({{review}}) </p>
+        by {{user.username}} on
+        {{format_date created_at}}
+      </div>
+      <div class="meta">
+        {{upvotesCount}} upvote(s) | {{downvotesCount}} downvote(s) |
+        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</section>
+
+<section>
+  <h3>Your Activity logs</h3>
+  {{#each posts}}
+  <div class="card black darken-1">
+    <div class="card-content">
+      <div class="line">
+        <span class="card-title"><a href="/post/{{id}}">{{song_title}}</a></span>
+        <div class="rate">
+          <span>
+            <h5>{{song_artist}}</h5>
+          </span>
+          <p>Rating: ({{rating}})</p>
+        </div>
+        <p><a href="{{song_url}}" target="_blank">click here to checkout the song!</a></p>
+      </div>
+      <br>
+      <div>
+>>>>>>> 05e6972b6ea1b1e39e1a132de64225cd5d2230c7
         <p>Review: {{review}} </p>
         by {{user.username}} on
         {{format_date created_at}}
@@ -15,7 +62,11 @@
         {{upvotesCount}} upvote(s) | {{downvotesCount}} downvote(s) |
         <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
       </div>
-    </article>
-  </li>
+    </div>
+  </div>
   {{/each}}
+<<<<<<< HEAD
 </ol>
+=======
+</section>
+>>>>>>> 05e6972b6ea1b1e39e1a132de64225cd5d2230c7

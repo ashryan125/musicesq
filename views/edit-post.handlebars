@@ -1,13 +1,62 @@
-<div>
-    <h3> Edit post</h3>
-    <form>
+
+<article>
+  <div class="card black darken-1">
+    <div class="card-content">
+      <h2>
+        Edit Post
+      </h2>
+      <form class="edit-post-form">
         <div>
-            <input name="post-title" type="text" value="{{post.title}}" />
+          <input name="post-title" type="text" value="{{post.song_title}}" />
+
+          {{post.song_artist}}
+
+          <label for="review">Review (160 characters)</label>
+          <input type="text" id="review" name="review" value="{{post.song_title}}" />
+
+        </div>
+        <h4>Rate your song!</h4>
+
+        <div class="ratingValue" name="ratingValue">
+          <label>
+            <input name="rating" type="radio" value="1" />
+            <span>1</span>
+          </label>
+
+          <label>
+            <input name="rating" type="radio" value="2" />
+            <span>2</span>
+          </label>
+
+          <label>
+            <input name="rating" type="radio" value="3" />
+            <span>3</span>
+          </label>
+
+          <label>
+            <input name="rating" type="radio" value="4" />
+            <span>4</span>
+          </label>
+
+          <label>
+            <input name="rating" type="radio" value="5" />
+            <span>5</span>
+          </label>
         </div>
         <div>
-            <input name="review" type="text" value="{{post.review}}" class="form-input" />
+          {{post.upvotesCount}} {{format_plural "upvote" post.upvotesCount}}
+          {{post.downvotesCount}} {{format_plural "downvote" post.downvotesCount}}
+          by you on {{format_date post.created_at}}
+          |
+          <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
         </div>
         <button type="submit">Save post</button>
         <button type="button" class="delete-post-btn">Delete post</button>
-    </form>
-</div>
+    </div>
+  </div>
+  </form>
+</article>
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>
