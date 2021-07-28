@@ -1,9 +1,15 @@
 <div class="card black darken-1">
     <div class="card-content">
-        <a href="/post/{{id}}">{{song_title}}</a>
-        <span>({{song_artist}})</span>
-        <p>Rating: ({{rating}})</p>
-        <p>Review: ({{review}}) </p>
+        <div class="line">
+            <span class="card-title"><a href="/post/{{id}}">{{song_title}}</a></span>
+            <div class="rate">
+                <span>
+                    ({{song_artist}})
+                </span>
+                <p>Rating: ({{rating}})</p>
+            </div>
+        </div>
+        <p>Review: {{review}} </p>
         by {{user.username}} on
         {{format_date created_at}}
         {{upvotesCount}} upvote(s) | {{downvotesCount}} downvote(s) |

@@ -1,28 +1,30 @@
 <section>
-<h3>Homepage</h3>
-{{#each posts}}
-<div class="card black darken-1">
-  <div class="card-content">
-    <div class="line">
-      <span class="card-title"><a href="/post/{{id}}">{{song_title}}</a></span>
-      <span>
-        <h5>{{song_artist}}</h5>
-      </span>
-      <p>Rating: ({{rating}})</p>
-    </div>
-    <br>
-    <div>
-      <p>Review: ({{review}}) </p>
-      by {{user.username}} on
-      {{format_date created_at}}
-    </div>
-    <div class="meta">
-      {{upvotesCount}} upvote(s) | {{downvotesCount}} downvote(s) |
-      <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+  <h3>Homepage</h3>
+  {{#each posts}}
+  <div class="card black darken-1">
+    <div class="card-content">
+      <div class="line">
+        <span class="card-title"><a href="/post/{{id}}">{{song_title}}</a></span>
+        <div class="rate">
+          <span>
+            <h5>{{song_artist}}</h5>
+          </span>
+          <p>Rating: ({{rating}})</p>
+        </div>
+      </div>
+      <br>
+      <div>
+        <p>Review: ({{review}}) </p>
+        by {{user.username}} on
+        {{format_date created_at}}
+      </div>
+      <div class="meta">
+        {{upvotesCount}} upvote(s) | {{downvotesCount}} downvote(s) |
+        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+      </div>
     </div>
   </div>
-</div>
-{{/each}}
+  {{/each}}
 </section>
 
 <section>
@@ -31,10 +33,14 @@
   <div class="card black darken-1">
     <div class="card-content">
       <div class="line">
-        <a href="/post/{{id}}">{{song_title}}</a>
-        <span>{{song_artist}}</span>
+        <span class="card-title"><a href="/post/{{id}}">{{song_title}}</a></span>
+        <div class="rate">
+          <span>
+            <h5>{{song_artist}}</h5>
+          </span>
+          <p>Rating: ({{rating}})</p>
+        </div>
         <p><a href="{{song_url}}" target="_blank">click here to checkout the song!</a></p>
-        <p>Rating: {{rating}}</p>
       </div>
       <br>
       <div>

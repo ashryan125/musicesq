@@ -267,4 +267,8 @@
    font-size: 20px;
  }
 
+ .rate {
+   display: flex;
+   justify-content: space-between;
+ }
  

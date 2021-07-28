@@ -7,10 +7,12 @@
           <div class="line">
             <div class="title">
               <a href="/post/{{post.id}}">{{post.song_title}} </a>
-              <span>({{post.song_artist}})</span>
+              <div class="rate">
+                <span>({{post.song_artist}})</span>
+                <p>Rating: {{post.rating}}</p>
+              </div>
             </div>
-            <p><a href="{{song_url}}" target="_blank">Click here to checkout the song!</a></p>
-            <p>Rating: {{post.rating}}</p>
+            <p><a href="{{song_url}}" target="_blank">click here to checkout the song!</a></p>
           </div>
           <p>Review: {{post.review}} </p>
           by
