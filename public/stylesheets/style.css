@@ -75,9 +75,10 @@
     border: white 1px solid;
     margin-bottom: 24px;
   }
-  /* .card-content{
 
-  } */
+  .border-line{
+    border: white 1px solid;
+  }
   
   textarea, input {
     padding: .5%;
@@ -198,11 +199,6 @@
     background-color: #EA706C;
   }
   
-  .comment-form {
-    margin-bottom: 5%;
-    border: 1px solid white;
-  }
-
   .text {
     color: white;
     font-size: 20px;
