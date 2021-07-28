@@ -1,7 +1,7 @@
 <section>
   <h3>Add Comments</h3>
   <div class="card black darken-1">
-    <div class="card-content">
+    <div class="card-content border-line">
       <article class="post">
         <div>
           <div class="line">
@@ -27,45 +27,40 @@
           downvotes |
           <a href="/post/{{post.id}}">{{post.comments.length}} comments</a>
         </div>
-      </article>
-
-      {{#if loggedIn}}
-      <form class="comment-form">
-        <div>
-          <textarea name="comment-body"></textarea>
-        </div>
-        <div>
-          <button type="submit">add comment</button>
-          <button type="button" class="upvote-btn">upvote</button>
-          <button type="button" class="downvote-btn">downvote</button>
-        </div>
-      </form>
-      {{/if}}
+        <br>
+        {{#if loggedIn}}
+        <form class="comment-form">
+          <div>
+            <textarea name="comment-body"></textarea>
+          </div>
+          <div>
+            <button type="submit">add comment</button>
+            <button type="button" class="upvote-btn">upvote</button>
+            <button type="button" class="downvote-btn">downvote</button>
+          </div>
+        </form>
+        {{/if}}
     </div>
   </div>
 </section>
 
 <section>
   <h4>Comments</h4>
-  <div class="card black darken-1">
-    <div class="card-content">
-      <div class="comments">
-        {{#each post.comments}}
-        <section class="comment">
-          <div class="card black darken-1">
-            <div class="card-content">
-              <div class="meta">
-                {{user.username}}
-              </div>
-              <div class="text">
-                {{comment_text}}
-              </div>
-            </div>
+  <div class="comments">
+    {{#each post.comments}}
+    <section class="comment">
+      <div class="card black darken-1">
+        <div class="card-content border-line">
+          <div class="meta">
+            {{user.username}}
           </div>
-        </section>
-        {{/each}}
+          <div class="text">
+            {{comment_text}}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+    {{/each}}
   </div>
 </section>
 
