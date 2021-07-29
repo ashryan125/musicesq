@@ -1,5 +1,5 @@
 <section>
-  
+
   <div class="card black darken-1">
     <div class="card-content border-line">
       <article class="post">
@@ -20,14 +20,15 @@
           on
           {{format_date post.created_at}}
         </div>
-        <div class="meta">
+        <div class="rate">
+          <a href="/post/{{post.id}}">{{post.comments.length}} comments</a>
           {{post.upvotesCount}}
           upvotes |
           {{post.downvotesCount}}
-          downvotes |
-          <a href="/post/{{post.id}}">{{post.comments.length}} comments</a>
+          downvotes
+
         </div>
-       
+
         <br>
         {{#if loggedIn}}
         <form class="comment-form">

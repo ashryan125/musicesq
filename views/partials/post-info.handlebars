@@ -9,10 +9,15 @@
                 <p>Rating: ({{rating}})</p>
             </div>
         </div>
-        <p>Review: {{review}} </p>
-        by {{user.username}} on
-        {{format_date created_at}}
-        {{upvotesCount}} upvote(s) | {{downvotesCount}} downvote(s) |
-        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+        <div>
+            <p>Review: {{review}} </p>
+            by {{user.username}} on
+            {{format_date created_at}}
+        </div>
+        <br>
+        <div class="rate">
+            <a href="/post/{{id}}">{{comments.length}} comments</a>
+            {{upvotesCount}} Upvotes | {{downvotesCount}} Downvotes
+        </div>
     </div>
 </div>
