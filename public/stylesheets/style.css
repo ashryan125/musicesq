@@ -31,10 +31,10 @@
   }
 
   .tab {
-    font-family: Comfortaa;
+    font-family:'Comfortaa', cursive; 
     font-style: normal;
-  font-weight: 300;
-  font-display: swap;
+    font-weight: 300;
+    font-display: swap;
     float: none;
     margin: 0 40px;
   }
@@ -147,7 +147,6 @@
     font-weight: bold;
     transition: color .1s;
     margin-left: 16px;
-
     font-family:'Comfortaa', cursive; 
 
   }
@@ -157,8 +156,6 @@
     color: white;
   }
 
-
-  
   .home a:hover{
     background : none;
     color: white;
@@ -268,6 +265,7 @@
   .footer-color{
     color: #EA706C;
   }
+
   .card-content, 
  a{
     color: white;
@@ -279,10 +277,8 @@
   }
 
   .brand-logo {
-
     font-family:'Pacifico', cursive;
     font-style: italic;
-
   }
 
  .password{
@@ -300,6 +296,10 @@
  .rate {
    display: flex;
    justify-content: space-between;
+ }
+
+ .artist {
+   font-style: italic;
  }
  
  @media screen and (max-width: 996px){
