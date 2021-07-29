@@ -4,7 +4,7 @@
     margin: 0;
   }
 
-  h2, h3, h4 {
+  h1, h2, h3, h4 {
     color: #EA706C;
   }
   
@@ -162,9 +162,7 @@
 
   .home a{
    font-size: 22px;
-
    font-family:'Comfortaa', cursive;
-
   }
 
   .delete-post-btn {
@@ -264,7 +262,6 @@
   .footer-color{
     color: #EA706C;
   }
-
   .card-content, 
  a{
     color: white;
