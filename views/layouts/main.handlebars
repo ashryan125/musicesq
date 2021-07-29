@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Pacifico&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="/stylesheets/style.css">
 
 </head>
@@ -20,7 +21,9 @@
         <header>
             <nav class="nav-extended">
                 <div class="nav-wrapper">
-                    <a href="/"><img src="/images/beatItLogo-01.png" alt="beat-it-logo" /></a>
+                    <span class="animate__animated animate__jackInTheBox"><img src="/images/beatItLogo-01.png"
+                            alt="beat-it-logo"/></span>
+                    {{!-- <a href="/"><img src="/images/beatItLogo-01.png" alt="beat-it-logo" /></a> --}}
                     <a href="/" class="brand-logo">Beat-IT</a>
                     {{#if loggedIn}}
                     <ul id="nav-mobile" class="right">

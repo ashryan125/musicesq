@@ -18,6 +18,10 @@
     background-color:black;
     color:white;
   }
+
+  /* body {
+    background-image: 
+  } */
   
   header {
     display: flex;
@@ -301,7 +305,9 @@
  .artist {
    font-style: italic;
  }
- 
+
+
+
  @media screen and (max-width: 996px){
  
  }
