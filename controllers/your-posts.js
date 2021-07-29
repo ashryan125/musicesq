@@ -36,12 +36,12 @@ router.get("/", withAuth, (req, res) => {
         attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
         include: {
           model: User,
-          attributes: ["username"],
+          attributes: ["id", "username"],
         },
       },
       {
         model: User,
-        attributes: ["username"],
+        attributes: ["id", "username"],
       },
     ],
   })
@@ -87,12 +87,12 @@ router.get('/edit/:id', withAuth, (req, res) => {
         attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
         include: {
           model: User,
-          attributes: ['username']
+          attributes: ["id", "username"],
         }
       },
       {
         model: User,
-        attributes: ['username']
+        attributes: ["id", "username"],
       }
     ]
   })

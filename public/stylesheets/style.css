@@ -1,307 +1,305 @@
-
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-  h2, h3, h4 {
-    color: #EA706C;
-  }
-  
-  .tabs .tab {
-  margin: 0 16px;
-  }
+h2, h3, h4 {
+  color: #EA706C;
+}
 
-  body, html {
-    line-height: 1.5;
-    font-family: sans-serif;
-    background-color:black;
-    color:white;
-  }
-  
-  header {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.tabs .tab {
+margin: 0 16px;
+}
 
-  .tabs {
-    background-color: black;
-    justify-content: center;
-  }
+body, html {
+  line-height: 1.5;
+  font-family: sans-serif;
+  background-color:black;
+  color:white;
+}
 
-  .tab {
-    font-family:'Comfortaa', cursive; 
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    float: none;
-    margin: 0 40px;
-  }
-  
-  a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color .1s;
-  }
-  
-  a:hover {
-    color: white;
-    background-color: none;
-  }
-  
-  button {
-    background-color: #EA706C;
-    border: 0;
-    padding: 1%;
-    color: white;
-    font-weight: bold;
-    transition: background-color .1s;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #EA706C;
-  }
-  
-  .post-list {
-    margin: 0;
-    padding: 0;
-    border: white 1px solid;
-  }
+header {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  .line{
-    border-bottom:white 1px solid;
-  }
+.tabs {
+  background-color: black;
+  justify-content: center;
+}
 
-  .your-post-card {
-    border: white 1px solid;
-    margin-bottom: 24px;
-  }
+.tab {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  font-display: swap;
+  float: none;
+  margin: 0 40px;
+}
 
-  .border-line{
-    border: white 1px solid;
-  }
-  
-  textarea, input {
-    padding: .5%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  textarea:focus, input:focus {
-    outline: none;
-    border: 1px solid white;
-  }
-  
-  textarea {
-    min-width: 40%;
-    min-height: 100px;
-    color: white;
-  }
-  
-  form > div {
-    margin-bottom: 2%;
-  }
-  
-  form label {
-    display: block;
-  }
-  
-  .wrapper {
-    width: 100%;
-    min-height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  header {
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1%;
-  }
-  
-  header h1 {
-    font-size: 1em;
-  }
-  
-  main {
-    flex: 1;
-    padding: 2% 4%;
-  }
-  
-  .btn-no-style {
-    background:none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: none;
-    color: #EA706C;
-    font-size: 20px;
-    font-weight: bold;
-    transition: color .1s;
-    margin-left: 16px;
-    font-family:'Comfortaa', cursive; 
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  transition: color .1s;
+}
 
-  }
-  
-  .btn-no-style:hover {
-    background : none;
-    color: white;
-  }
+a:hover {
+  color: white;
+  background-color: none;
+}
 
-  .home a:hover{
-    background : none;
-    color: white;
-  }
+button {
+  background-color: #EA706C;
+  border: 0;
+  padding: 1%;
+  color: white;
+  font-weight: bold;
+  transition: background-color .1s;
+  cursor: pointer;
+  border-radius: 5px;
+}
 
-  .home a{
-   font-size: 22px;
+button:hover {
+  background-color: #e25550;
+}
 
-   font-family:'Comfortaa', cursive;
+.post-list {
+  margin: 0;
+  padding: 0;
+  border: white 1px solid;
+}
 
-  }
+.line{
+  border-bottom:white 1px solid;
+}
 
-  .delete-post-btn {
-    background-color: #EA706C;
-    color:white 
-  }
-  
-  .delete-post-btn:hover {
-    background-color: #EA706C;
-    color: white;
-  }
-  
-  .post {
-    margin-bottom: 2%;
-    line-height: 150%;
-  }
-  
-  .post .title span {
-    font-style: italic;
-    font-size: 90%;
-    color: white;
-  }
-  
-  .edit-link {
-    display: block;
-    margin: 8px 16px;
-    color:  #EA706C;
-    width: 20%;
-  }
-  
-  .upvote-btn {
-    background-color: #EA706C;
-    transition: background-color .1s;
-  }
-  
-  .upvote-btn:hover {
-    background-color: #EA706C;
-  }
-  
-  .text {
-    color: white;
-    font-size: 20px;
-  }
-  
-  .comment {
-    padding: 1%;
-    margin-bottom: 1%;
-    color: white;
-  }
-  
-  .comment .meta {
-    font-size: 90%;
-    margin-bottom: .5%;
-    opacity: .6;
-    color: white;
-  }
-  
-  .new-post-form input {
-    width: 75%;
-  }
-  
-  .edit-post-form {
-    margin-bottom: 5%;
-  }
-  
-  footer {
-    border-top: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    padding: 1%;
-    font-size: 110%;
-  }
+.your-post-card {
+  border: white 1px solid;
+  margin-bottom: 24px;
+}
 
-  .edit{
-    border:white 1px solid;
-  }
+.border-line{
+  border: white 1px solid;
+}
 
-  .nav-extended {
-    margin: 7 px 0;
-    padding-top: 15px;
-    background-color: black;
-  }
+textarea, input {
+  padding: .5%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
 
-  .nav-content {
-    float: none;
-    text-align: center;
-  }
+textarea:focus, input:focus {
+  outline: none;
+  border: 1px solid white;
+}
 
-  .nav-extended a { 
-    color: #EA706C;
-  }
+textarea {
+  min-width: 40%;
+  min-height: 100px;
+  color: white;
+}
 
-  .page-footer{
-    background-color: black;
-  }
+form > div {
+  margin-bottom: 2%;
+}
 
-  .footer-color{
-    color: #EA706C;
-  }
+form label {
+  display: block;
+}
 
-  .card-content, 
- a{
-    color: white;
-    padding-bottom: 16px;
-  }
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
 
-  .nav-wrapper img{
-    width: 10%;
-  }
+header {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1%;
+}
 
-  .brand-logo {
-    font-family:'Pacifico', cursive;
-    font-style: italic;
-  }
+header h1 {
+  font-size: 1em;
+}
 
- .password{
-   color: white;
- }
+main {
+  flex: 1;
+  padding: 2% 4%;
+}
 
- .login a{
-   font-size: 20px;
- }
+.btn-no-style {
+  background:none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: #EA706C;
+  font-size: 20px;
+  font-weight: bold;
+  transition: color .1s;
+  margin-left: 16px;
 
- .title a {
-   font-size: 20px;
- }
+  font-family:'Comfortaa', cursive; 
 
- .rate {
-   display: flex;
-   justify-content: space-between;
- }
+}
 
- .artist {
-   font-style: italic;
- }
- 
- @media screen and (max-width: 996px){
- 
- }
+.btn-no-style:hover {
+  background : none;
+  color: white;
+}
+
+
+
+.home a:hover{
+  background : none;
+  color: white;
+}
+
+.home a{
+ font-size: 22px;
+
+ font-family:'Comfortaa', cursive;
+
+}
+
+.delete-post-btn {
+  background-color: #EA706C;
+  color:white 
+}
+
+.delete-post-btn:hover {
+  background-color: #e25550;
+  color: white;
+}
+
+.post {
+  margin-bottom: 2%;
+  line-height: 150%;
+}
+
+.post .title span {
+  font-style: italic;
+  font-size: 90%;
+  color: white;
+}
+
+.edit-link {
+  display: block;
+  margin: 8px 16px;
+  color:  #EA706C;
+  width: 20%;
+}
+
+.upvote-btn {
+  background-color: #EA706C;
+  transition: background-color .1s;
+}
+
+.upvote-btn:hover {
+  background-color: #e25550;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+}
+
+.comment {
+  padding: 1%;
+  margin-bottom: 1%;
+  color: white;
+}
+
+.comment .meta {
+  font-size: 90%;
+  margin-bottom: .5%;
+  opacity: .6;
+  color: white;
+}
+
+.new-post-form input {
+  width: 75%;
+}
+
+.edit-post-form {
+  margin-bottom: 5%;
+}
+
+footer {
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  font-size: 110%;
+}
+
+.edit{
+  border:white 1px solid;
+}
+
+.nav-extended {
+  margin: 7 px 0;
+  padding-top: 15px;
+  background-color: black;
+}
+
+.nav-content {
+  float: none;
+  text-align: center;
+}
+
+.nav-extended a { 
+  color: #EA706C;
+}
+
+.page-footer{
+  background-color: black;
+}
+
+.footer-color{
+  color: #EA706C;
+}
+.card-content, 
+a{
+  color: white;
+  padding-bottom: 16px;
+}
+
+.nav-wrapper img{
+  width: 10%;
+}
+
+.brand-logo {
+
+  font-family:'Pacifico', cursive;
+  font-style: italic;
+
+}
+
+.password{
+ color: white;
+}
+
+.login a{
+ font-size: 20px;
+}
+
+.title a {
+ font-size: 20px;
+}
+
+.rate {
+ display: flex;
+ justify-content: space-between;
+}
+
