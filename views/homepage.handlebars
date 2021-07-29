@@ -5,12 +5,10 @@
     <div class="card-content border-line">
       <div class="line">
         <span class="card-title"><a href="/post/{{id}}">{{song_title}}</a></span>
-        <div class="rate">
-          <span>
-            <h5>{{song_artist}}</h5>
-          </span>
-          <p>Rating: {{rating}}</p>
-        </div>
+          <div class="rate">
+            <h5 class="artist">[{{song_artist}}]</h5>
+            <p>Rating: ({{rating}})</p>
+          </div>
       </div>
       <br>
       <div>
@@ -18,9 +16,10 @@
         by {{user.username}} on
         {{format_date created_at}}
       </div>
-      <div class="meta">
-        {{upvotesCount}} upvotes | {{downvotesCount}} downvotes |
+      <br>
+      <div class="rate">
         <a href="/post/{{id}}">{{comments.length}} comments</a>
+        {{upvotesCount}} Upvotes | {{downvotesCount}} Downvotes
       </div>
     </div>
   </div>

@@ -5,7 +5,7 @@ const { User, Post, Votes, Comment } = require("../../models");
 router.get("/", (req, res) => {
   // Access our User model and run .findAll() method)
   User.findAll({
-    attributes: { exclude: ["password"] },
+    attributes: { exclude: ["password"], include: ["id", "username"] },
   })
     .then((dbUserData) => res.json(dbUserData))
     .catch((err) => {
@@ -17,7 +17,7 @@ router.get("/", (req, res) => {
 // GET /api/users/1
 router.get("/:id", (req, res) => {
   User.findOne({
-    attributes: { exclude: ["password"] },
+    attributes: { exclude: ["password"], include: ["id", "username"] },
     where: {
       id: req.params.id,
     },
@@ -41,7 +41,7 @@ router.get("/:id", (req, res) => {
           attributes: ["song_title"],
         },
       },
-    ]
+    ],
   })
     .then((dbUserData) => {
       if (!dbUserData) {
@@ -69,28 +69,27 @@ router.post("/", (req, res) => {
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
 
-      res.json({ user: dbUserData, message: 'You are now logged in!' });
-    
+      res.json({ user: dbUserData, message: "You are now logged in!" });
     });
   });
 });
 
 // LOGIN ROUTE
-router.post('/login', (req, res) => {
+router.post("/login", (req, res) => {
   User.findOne({
     where: {
-      email: req.body.email
-    }
-  }).then(dbUserData => {
+      email: req.body.email,
+    },
+  }).then((dbUserData) => {
     if (!dbUserData) {
-      res.status(400).json({ message: 'No user with that email address!' });
+      res.status(400).json({ message: "No user with that email address!" });
       return;
     }
 
     const validPassword = dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res.status(400).json({ message: 'Incorrect password!' });
+      res.status(400).json({ message: "Incorrect password!" });
       return;
     }
 
@@ -100,7 +99,7 @@ router.post('/login', (req, res) => {
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
 
-      res.json({ user: dbUserData, message: 'You are now logged in!' });
+      res.json({ user: dbUserData, message: "You are now logged in!" });
     });
   });
 });
@@ -126,27 +125,22 @@ router.put("/:id", (req, res) => {
     });
 });
 
-
-
-
 // USER LOG OUT
-router.post('/logout', (req, res) => {
+router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
     });
-  }
-  else {
+  } else {
     res.status(404).end();
   }
 });
-
 
 router.delete("/:id", (req, res) => {
   User.destroy({
     where: {
       id: req.params.id,
-    }
+    },
   })
     .then((dbUserData) => {
       if (!dbUserData) {
