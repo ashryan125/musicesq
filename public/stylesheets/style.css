@@ -32,8 +32,9 @@ header {
 .tab {
   font-family: Comfortaa;
   font-style: normal;
-font-weight: 300;
-font-display: swap;
+  font-weight: 700;
+  font-size: 18px;
+  font-display: swap;
   float: none;
   margin: 0 40px;
 }
@@ -41,7 +42,8 @@ font-display: swap;
 a {
   text-decoration: none;
   color: white;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 18px;
   transition: color .1s;
 }
 
@@ -62,7 +64,7 @@ button {
 }
 
 button:hover {
-  background-color: #EA706C;
+  background-color: #e25550;
 }
 
 .post-list {
@@ -176,7 +178,7 @@ main {
 }
 
 .delete-post-btn:hover {
-  background-color: #EA706C;
+  background-color: #e25550;
   color: white;
 }
 
@@ -204,7 +206,7 @@ main {
 }
 
 .upvote-btn:hover {
-  background-color: #EA706C;
+  background-color: #e25550;
 }
 
 .text {

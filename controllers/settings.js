@@ -9,6 +9,9 @@ router.get("/", (req, res) => {
     attributes: { exclude: ["password"], include: ["id", "username"] },
   })
     .then((dbPostData) => {
+      console.log("User dbPostData");
+      console.log(dbPostData[0].dataValues.id);
+      
       res.render("settings", { loggedIn: true });
     })
     .catch((err) => {
