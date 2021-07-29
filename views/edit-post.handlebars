@@ -6,12 +6,12 @@
       </h1>
       <form class="edit-post-form">
         <div>
-          <input name="post-title" type="text" value="{{post.song_title}}" />
+          <input name="post-title" type="text" class="text-color" value="{{post.song_title}}" />
 
           {{post.song_artist}}
 
           <label for="review">Review (160 characters)</label>
-          <input type="text" id="review" name="review" value="{{post.review}}" />
+          <input type="text" id="review" name="review" class="text-color" value="{{post.review}}" />
 
         </div>
         <h4>Rate your song!</h4>
@@ -19,35 +19,34 @@
         <div class="ratingValue" name="ratingValue">
           <label>
             <input name="rating" type="radio" value="1" />
-            <span><i class="material-icons">music_note</i></span>
+            <span>1</span>
           </label>
 
           <label>
             <input name="rating" type="radio" value="2" />
-            <span><i class="material-icons">music_note</i></span>
+            <span>2</span>
           </label>
 
           <label>
             <input name="rating" type="radio" value="3" />
-            <span><i class="material-icons">music_note</i></span>
+            <span>3</span>
           </label>
 
           <label>
             <input name="rating" type="radio" value="4" />
-            <span><i class="material-icons">music_note</i></span>
+            <span>4</span>
           </label>
 
           <label>
             <input name="rating" type="radio" value="5" />
-            <span><i class="material-icons">music_note</i></span>
+            <span>5</span>
           </label>
         </div>
-        <div>
-          {{post.upvotesCount}} {{format_plural "upvote" post.upvotesCount}}
-          {{post.downvotesCount}} {{format_plural "downvote" post.downvotesCount}}
-          by you on {{format_date post.created_at}}
-          |
+        Changed by you on {{format_date post.created_at}}
+        <div class="rate">
           <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+          <div>{{post.upvotesCount}}<i class="material-icons">thumb_up</i></br>{{post.downvotesCount}}<i
+              class="material-icons">thumb_down</i></div>
         </div>
         <button type="submit">Save post</button>
         <button type="button" class="delete-post-btn">Delete post</button>
