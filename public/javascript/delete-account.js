@@ -6,11 +6,11 @@ async function deleteUser(event) {
       "You sure? Once deleted all posts/activity will also be deleted"
     )
   ) {
-    // const id = window.location.toString().split("/")[
-    //   window.location.toString().split("/").length - 1
-    // ];
+    const id = window.location.toString().split("/")[
+      window.location.toString().split("/").length - 1
+    ];
 
-    const id = req.session.user_id;
+    // const id = req.session.user_id;
 
     console.log(id);
 
@@ -29,4 +29,3 @@ async function deleteUser(event) {
 document
   .querySelector(".delete-user-btn")
   .addEventListener("click", deleteUser);
-
