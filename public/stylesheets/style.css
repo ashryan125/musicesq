@@ -4,7 +4,7 @@
     margin: 0;
   }
 
-  h2, h3, h4 {
+  h1, h2, h3, h4 {
     color: #EA706C;
   }
   
@@ -18,7 +18,7 @@
     background-color:black;
     color:white;
   }
-  
+
   header {
     display: flex;
     flex-wrap: wrap;
@@ -30,10 +30,10 @@
   }
 
   .tab {
-    font-family: Comfortaa;
+    font-family:'Comfortaa', cursive; 
     font-style: normal;
-  font-weight: 300;
-  font-display: swap;
+    font-weight: 300;
+    font-display: swap;
     float: none;
     margin: 0 40px;
   }
@@ -146,7 +146,6 @@
     font-weight: bold;
     transition: color .1s;
     margin-left: 16px;
-
     font-family:'Comfortaa', cursive; 
 
   }
@@ -156,8 +155,6 @@
     color: white;
   }
 
-
-  
   .home a:hover{
     background : none;
     color: white;
@@ -165,9 +162,7 @@
 
   .home a{
    font-size: 22px;
-
    font-family:'Comfortaa', cursive;
-
   }
 
   .delete-post-btn {
@@ -210,6 +205,10 @@
   .text {
     color: white;
     font-size: 20px;
+  }
+
+  .text-color {
+    color: white;
   }
   
   .comment {
@@ -278,10 +277,8 @@
   }
 
   .brand-logo {
-
     font-family:'Pacifico', cursive;
     font-style: italic;
-
   }
 
  .password{
@@ -300,7 +297,14 @@
    display: flex;
    justify-content: space-between;
  }
- 
- @media screen and (max-width: 996px){
- 
+
+ .artist {
+   font-style: italic;
  }
+
+
+ /* @media screen and (max-width: 414px){
+  .mobile-size {
+    font-size: 10px !important;
+  }
+ } */
