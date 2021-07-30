@@ -4,7 +4,7 @@
             <span class="card-title"><a href="/post/{{id}}">{{song_title}}</a></span>
             <div class="rate">
                 <span>
-                    ({{song_artist}})
+                    [{{song_artist}}]
                 </span>
                 <p>Rating: ({{rating}})</p>
             </div>
@@ -17,7 +17,7 @@
         <br>
         <div class="rate">
             <a href="/post/{{id}}">{{comments.length}} comments</a>
-            {{upvotesCount}} Upvotes | {{downvotesCount}} Downvotes
+            <div>{{upvotesCount}} <i class="material-icons">thumb_up</i></br>{{downvotesCount}}<i class="material-icons">thumb_down</i></div>
         </div>
     </div>
 </div>
