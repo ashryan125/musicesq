@@ -1,15 +1,9 @@
 <section>
   <h1>Your Posts</h1>
-  <div class="card black darken-1">
-    <div class="card-content">
       {{#if posts.length}}
       {{#each posts as |post|}}
-      <div class="your-post-card">
+
         {{> post-info post}}
-        <a href="/dashboard/edit/{{post.id}}" class="edit-link">
-          <h6>Edit post</h6>
-        </a>
-      </div>
       {{/each}}
       {{/if}}
     </div>
