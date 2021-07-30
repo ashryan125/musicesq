@@ -19,10 +19,6 @@
     color:white;
   }
 
-  /* body {
-    background-image: 
-  } */
-  
   header {
     display: flex;
     flex-wrap: wrap;
@@ -307,7 +303,8 @@
  }
 
 
-
- @media screen and (max-width: 996px){
- 
- }
+ /* @media screen and (max-width: 414px){
+  .mobile-size {
+    font-size: 10px !important;
+  }
+ } */
