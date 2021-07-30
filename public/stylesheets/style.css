@@ -71,10 +71,6 @@
     border: white 1px solid;
   }
 
-  .line{
-    border-bottom:white 1px solid;
-  }
-
   .your-post-card {
     border: white 1px solid;
     margin-bottom: 24px;
@@ -193,7 +189,7 @@
   
   .edit-link {
     display: block;
-    margin: 8px 16px;
+    margin: 8px 0;
     color:  #EA706C;
     width: 20%;
   }
