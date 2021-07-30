@@ -12,6 +12,10 @@
   margin: 0 16px;
   }
 
+  body {
+    background-image: url('/images/music-background.png');
+  }
+
   body, html {
     line-height: 1.5;
     font-family: sans-serif;
@@ -20,6 +24,7 @@
   }
   
   header {
+    background-color: black;
     display: flex;
     flex-wrap: wrap;
   }
