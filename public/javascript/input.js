@@ -74,6 +74,7 @@ async function apiCall(event) {
                 } else {
                     //error handling
                     console.log('error');
+                    request.abort();
                     return;
                 }
             };
