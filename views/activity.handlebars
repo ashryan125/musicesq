@@ -1,14 +1,14 @@
 <section>
-  <h3>Your Activity logs</h3>
+  <h1>Your Activity</h1>
   {{#each posts}}
   <div class="card black darken-1">
     <div class="card-content border-line">
       <div class="line">
-        <a href="/post/{{id}}">{{song_title}}</a>
+        <span class ="card-title"><a href="/post/{{id}}">{{song_title}}</a></span>
         <span class="artist">[{{song_artist}}]</span>
         <div class="rate">
           <p><a href="{{song_url}}" target="_blank">click here to checkout the song!</a></p>
-          <p>Rating: {{rating}}</p>
+          <p>Rating: ({{rating}})</p>
         </div>
       </div>
       <br>
@@ -19,7 +19,7 @@
       </div>
       <div class="rate">
         <a href="/post/{{id}}">{{comments.length}} comments</a>
-        {{upvotesCount}} Upvotes | {{downvotesCount}} Downvotes
+        <div>{{upvotesCount}} <i class="material-icons">thumb_up</i></br>{{downvotesCount}}<i class="material-icons">thumb_down</i></div>
       </div>
     </div>
   </div>

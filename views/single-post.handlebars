@@ -6,10 +6,10 @@
         <div>
           <div class="line">
             <div class="title">
-              <a href="/post/{{post.id}}">{{post.song_title}} </a>
+              <span class = "card-title"><a href="/post/{{post.id}}">{{post.song_title}} </a></span>
               <div class="rate">
-                <span>{{post.song_artist}}</span>
-                <p>Rating: {{post.rating}}</p>
+                <span>[{{post.song_artist}}]</span>
+                <p>Rating: ({{post.rating}})</p>
               </div>
             </div>
             <p><a href="{{song_url}}" target="_blank">click here to checkout the song!</a></p>
@@ -22,10 +22,7 @@
         </div>
         <div class="rate">
           <a href="/post/{{post.id}}">{{post.comments.length}} comments</a>
-          {{post.upvotesCount}}
-          upvotes |
-          {{post.downvotesCount}}
-          downvotes
+          <div>{{post.upvotesCount}} <i class="material-icons">thumb_up</i></br>{{post.downvotesCount}}<i class="material-icons">thumb_down</i></div>
 
         </div>
 

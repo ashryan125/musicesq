@@ -1,5 +1,5 @@
 <section>
-  <h3>Homepage</h3>
+  <h1>Homepage</h1>
   {{#each posts}}
   <div class="card black darken-1">
     <div class="card-content border-line">
@@ -18,8 +18,8 @@
       </div>
       <br>
       <div class="rate">
-        <a href="/post/{{id}}">{{comments.length}} comments</a>
-        {{upvotesCount}} Upvotes | {{downvotesCount}} Downvotes
+        <div><a href="/post/{{id}}">{{comments.length}} comments</a></div>
+        <div>{{upvotesCount}} <i class="material-icons">thumb_up</i></br>{{downvotesCount}}<i class="material-icons">thumb_down</i></div>
       </div>
     </div>
   </div>

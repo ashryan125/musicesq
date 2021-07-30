@@ -1,13 +1,14 @@
 <link rel="stylesheet" href="/stylesheets/autocomp.css">
 
 <section>
-  <h2>Create New Post</h2>
+  <h1>Create New Post</h1>
   <div class="card black darken-1">
     <div class="card-content border-line">
       <form class="new-post-form" autocomplete="off" action="/action_page.php">
         <div id="form-form-form">
           <div class="autocomplete" style="width:100%;" id="autocomplete">
-            <input type="text" id="searchTitleInput" name="songTitle" placeholder="Song Title">
+            <label for="song-title">Song Title</label>
+            <input type="text" id="searchTitleInput" name="songTitle" placeholder="">
           </div>
         </div>
         <div>
@@ -24,6 +25,43 @@
         </div>
 
         <h4>Rate your song!</h4>
+        {{!-- <form class="rating">
+          <label>
+            <input name="music" type="radio" value="1" />
+            <span class="icon"><i class="material-icons">audiotrack</i></span>
+          </label>
+
+          <label>
+            <input name="music" type="radio" value="2" />
+            <span class="icon"><i class="material-icons">audiotrack</i></span>
+            <span class="icon"><i class="material-icons">audiotrack</i></span>
+          </label>
+
+          <label>
+            <input name="music" type="radio" value="3" />
+            <span class="icon"><i class="material-icons">audiotrack</i></span>
+            <span class="icon"><i class="material-icons">audiotrack</i></span>
+            <span class="icon"><i class="material-icons">audiotrack</i></span>
+          </label>
+
+          <label>
+            <input name="music" type="radio" value="4" />
+            <span class="icon"><i class="material-icons">audiotrack</i></span>
+            <span class="icon"><i class="material-icons">audiotrack</i></span>
+            <span class="icon"><i class="material-icons">audiotrack</i></span>
+            <span class="icon"><i class="material-icons">audiotrack</i></span>
+          </label>
+
+          <label>
+            <input name="music" type="radio" value="5" />
+            <span class="icon"><i class="material-icons">audiotrack</i></span>
+            <span class="icon"><i class="material-icons">audiotrack</i></span>
+            <span class="icon"><i class="material-icons">audiotrack</i></span>
+            <span class="icon"><i class="material-icons">audiotrack</i></span>
+            <span class="icon"><i class="material-icons">audiotrack</i></span>
+          </label>
+        </form> --}}
+
         <div class="ratingValue" name="ratingValue">
           <label class="custom-radio">
             <input class="with-font" name="rating" type="radio" value="1" />
@@ -31,22 +69,22 @@
           </label>
 
           <label class="custom-radio">
-            <input class="with-font"  name="rating" type="radio" value="2" />
+            <input class="with-font" name="rating" type="radio" value="2" />
             <span class="checkmark">2</span>
           </label>
 
           <label class="custom-radio">
-            <input class="with-font"  name="rating" type="radio" value="3" />
+            <input class="with-font" name="rating" type="radio" value="3" />
             <span class="checkmark">3</span>
           </label>
 
           <label class="custom-radio">
-            <input class="with-font"  name="rating" type="radio" value="4" />
+            <input class="with-font" name="rating" type="radio" value="4" />
             <span class="checkmark">4</span>
           </label>
 
           <label class="custom-radio">
-            <input class="with-font"  name="rating" type="radio" value="5" />
+            <input class="with-font" name="rating" type="radio" value="5" />
             <span class="checkmark">5</span>
           </label>
         </div>
