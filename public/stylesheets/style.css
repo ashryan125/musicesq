@@ -1,5 +1,8 @@
 * {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 52fc13a16beda6576f30baf2c2db54fc3b6a3e61
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -19,7 +22,11 @@
     background-color:black;
     color:white;
   }
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 52fc13a16beda6576f30baf2c2db54fc3b6a3e61
   header {
     display: flex;
     flex-wrap: wrap;
@@ -31,10 +38,17 @@
   }
 
   .tab {
+<<<<<<< HEAD
     font-family: Comfortaa;
     font-style: normal;
   font-weight: 300;
   font-display: swap;
+=======
+    font-family:'Comfortaa', cursive; 
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+>>>>>>> 52fc13a16beda6576f30baf2c2db54fc3b6a3e61
     float: none;
     margin: 0 40px;
   }
@@ -127,9 +141,15 @@
     padding: 0 1%;
   }
   
+<<<<<<< HEAD
   /* header h1 {
     font-size: 1em;
   } */
+=======
+  header h1 {
+    font-size: 1em;
+  }
+>>>>>>> 52fc13a16beda6576f30baf2c2db54fc3b6a3e61
   
   main {
     flex: 1;
@@ -147,7 +167,10 @@
     font-weight: bold;
     transition: color .1s;
     margin-left: 16px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 52fc13a16beda6576f30baf2c2db54fc3b6a3e61
     font-family:'Comfortaa', cursive; 
 
   }
@@ -157,8 +180,11 @@
     color: white;
   }
 
+<<<<<<< HEAD
 
   
+=======
+>>>>>>> 52fc13a16beda6576f30baf2c2db54fc3b6a3e61
   .home a:hover{
     background : none;
     color: white;
@@ -166,9 +192,13 @@
 
   .home a{
    font-size: 22px;
+<<<<<<< HEAD
 
    font-family:'Comfortaa', cursive;
 
+=======
+   font-family:'Comfortaa', cursive;
+>>>>>>> 52fc13a16beda6576f30baf2c2db54fc3b6a3e61
   }
 
   .delete-post-btn {
@@ -212,6 +242,13 @@
     color: white;
     font-size: 20px;
   }
+<<<<<<< HEAD
+=======
+
+  .text-color {
+    color: white;
+  }
+>>>>>>> 52fc13a16beda6576f30baf2c2db54fc3b6a3e61
   
   .comment {
     padding: 1%;
@@ -279,10 +316,15 @@
   }
 
   .brand-logo {
+<<<<<<< HEAD
 
     font-family:'Pacifico', cursive;
     font-style: italic;
 
+=======
+    font-family:'Pacifico', cursive;
+    font-style: italic;
+>>>>>>> 52fc13a16beda6576f30baf2c2db54fc3b6a3e61
   }
 
  .password{
@@ -301,6 +343,7 @@
    display: flex;
    justify-content: space-between;
  }
+<<<<<<< HEAD
  
  @media screen and (max-width: 996px){
  
@@ -611,3 +654,16 @@ a{
 }
 
 >>>>>>> d4b34cd7e0e07f1a6050985170cc73dd29c5043c
+=======
+
+ .artist {
+   font-style: italic;
+ }
+
+
+ /* @media screen and (max-width: 414px){
+  .mobile-size {
+    font-size: 10px !important;
+  }
+ } */
+>>>>>>> 52fc13a16beda6576f30baf2c2db54fc3b6a3e61
