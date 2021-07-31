@@ -12,14 +12,19 @@
   margin: 0 16px;
   }
 
+  body {
+    background-image: url('/images/music-background.png');
+  }
+
   body, html {
     line-height: 1.5;
     font-family: sans-serif;
     background-color:black;
     color:white;
   }
-
+  
   header {
+    background-color: black;
     display: flex;
     flex-wrap: wrap;
   }
@@ -30,10 +35,10 @@
   }
 
   .tab {
-    font-family:'Comfortaa', cursive; 
+    font-family: Comfortaa;
     font-style: normal;
-    font-weight: 300;
-    font-display: swap;
+  font-weight: 300;
+  font-display: swap;
     float: none;
     margin: 0 40px;
   }
@@ -69,10 +74,6 @@
     margin: 0;
     padding: 0;
     border: white 1px solid;
-  }
-
-  .line{
-    border-bottom:white 1px solid;
   }
 
   .your-post-card {
@@ -126,9 +127,9 @@
     padding: 0 1%;
   }
   
-  header h1 {
+  /* header h1 {
     font-size: 1em;
-  }
+  } */
   
   main {
     flex: 1;
@@ -146,6 +147,7 @@
     font-weight: bold;
     transition: color .1s;
     margin-left: 16px;
+
     font-family:'Comfortaa', cursive; 
 
   }
@@ -155,6 +157,8 @@
     color: white;
   }
 
+
+  
   .home a:hover{
     background : none;
     color: white;
@@ -162,7 +166,9 @@
 
   .home a{
    font-size: 22px;
+
    font-family:'Comfortaa', cursive;
+
   }
 
   .delete-post-btn {
@@ -188,7 +194,7 @@
   
   .edit-link {
     display: block;
-    margin: 8px 16px;
+    margin: 8px 0;
     color:  #EA706C;
     width: 20%;
   }
@@ -205,10 +211,6 @@
   .text {
     color: white;
     font-size: 20px;
-  }
-
-  .text-color {
-    color: white;
   }
   
   .comment {
@@ -277,8 +279,10 @@
   }
 
   .brand-logo {
+
     font-family:'Pacifico', cursive;
     font-style: italic;
+
   }
 
  .password{
@@ -298,13 +302,13 @@
    justify-content: space-between;
  }
 
- .artist {
-   font-style: italic;
+ .post-title {
+   color: white;
  }
-
-
- /* @media screen and (max-width: 414px){
-  .mobile-size {
-    font-size: 10px !important;
-  }
- } */
+ 
+ .text-color {
+   color: white;
+ }
+ @media screen and (max-width: 996px){
+ 
+ }
