@@ -61,7 +61,14 @@ SO THAT I can collaborate with other audiophiles and gain rank with upvotes
 ---
 
 ## ScreenShot
-
+![screenshot](public/images/Screenshot107.png)
+![screenshot](public/images/Screenshot108.png)
+![screenshot](public/images/Screenshot109.png)
+![screenshot](public/images/Screenshot110.png)
+![screenshot](public/images/Screenshot111.png)
+![screenshot](public/images/Screenshot112.png)
+![screenshot](public/images/Screenshot113.png)
+![screenshot](public/images/Screenshot114.png)
 
 ---
 
