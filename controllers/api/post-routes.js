@@ -134,8 +134,9 @@ router.put("/:id", withAuth, (req, res) => {
     {
       song_title: req.body.song_title,
       song_artist: req.body.song_artist,
+      song_url: req.body.song_url,
       review: req.body.review,
-      rating: req.body.rating,
+      rating: req.body.rating
     },
     {
       where: {
@@ -145,6 +146,7 @@ router.put("/:id", withAuth, (req, res) => {
   )
     .then((dbPostData) => {
       if (!dbPostData) {
+        console.log("error happened in API route");
         res.status(404).json({ message: "No post found with this id" });
         return;
       }

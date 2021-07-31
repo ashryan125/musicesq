@@ -1,28 +1,38 @@
 <div class="card black darken-1">
     <div class="card-content border-line">
         <div class="line">
-            <span class="card-title"><a href="/post/{{id}}">{{song_title}} - {{song_artist}}</a></span>
-            <div class="rate">
+            <span class="card-title"><a href="/post/{{id}}">{{song_title}}
+                    <span class="post-style">({{song_artist}})</span>
+                </a></span>
+            <p><a href="{{song_url}}" target="_blank" class="post-style">Wanna hear it?? Click here!</a></p>
+            <div class="rate" style="margin-top: 10px;">
                 <p>Rating: {{rating}}</p>
             </div>
+            <div class="rate">
+                <p>Review: {{review}} </p>
+            </div>
         </div>
-        <br>
-        <div>
-            <p>Review: {{review}} </p>
-        </div>
+
+
         <div class="rate">
             <a href="/post/{{id}}">{{comments.length}} comments</a>
-            <div>{{upvotesCount}} <i class="material-icons">thumb_up</i></br>{{downvotesCount}}<i
-                    class="material-icons">thumb_down</i></div>
         </div>
-            <span><a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a></span>
-            <p><a href="{{song_url}}" target="_blank">Interested? Click here!</a></p>
-        </a>
+        <div style="margin-bottom: 20px;">
+            {{upvotesCount}} <i class="material-icons">thumb_up</i>
+            {{downvotesCount}}<i class="material-icons">thumb_down</i>
+        </div>
+
+
+
         <div>
             <span>
                 by {{user.username}} on {{format_date created_at}}
             </span>
 
         </div>
+
+        <div style="margin-top: 20px;"> <span><a href="/dashboard/edit/{{id}}" class="edit-link">Edit
+                    post</a></span> </div>
+
     </div>
 </div>

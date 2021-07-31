@@ -15,6 +15,8 @@ async function editFormHandler(event) {
     window.location.toString().split("/").length - 1
   ];
 
+  console.log(rating, review, id);
+  
   const response = await fetch(`/api/posts/${id}`, {
     method: "PUT",
     body: JSON.stringify({
@@ -30,6 +32,7 @@ async function editFormHandler(event) {
   if (response.ok) {
     document.location.replace(`/post/${id}`);
   } else {
+    console.log("error happened in javascript public");
     alert(response.statusText);
   }
 }

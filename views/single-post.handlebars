@@ -2,26 +2,36 @@
 
   <div class="card black darken-1">
     <div class="card-content border-line">
-      <article class="post">
+      <section class="post">
         <div>
           <div class="line">
-            <div class="title">
-              <span class = "card-title"><a href="/post/{{post.id}}">{{post.song_title}} - {{post.song_artist}}</a></span>
-              <div class="rate">
+            <span class="card-title"><a href="/post/{{post.id}}">{{post.song_title}}
+                    <span class="post-style">({{post.song_artist}})</span>
+                </a></span>
+            <p><a href="{{post.song_url}}" target="_blank" class="post-style">Wanna hear it?? Click here!</a></p>
+            <div class="rate" style="margin-top: 10px;">
                 <p>Rating: {{post.rating}}</p>
-              </div>
             </div>
-            <p><a href="{{song_url}}" target="_blank">click here to checkout the song!</a></p>
-          </div>
-          <p>Review: {{post.review}} </p>
-          by
-          {{post.user.username}}  
-          on
-          {{format_date post.created_at}}
+            <div class="rate">
+                <p>Review: {{post.review}} </p>
+            </div>
         </div>
+
+
         <div class="rate">
-          <a href="/post/{{post.id}}">{{post.comments.length}} comments</a>
-          <div>{{post.upvotesCount}} <i class="material-icons">thumb_up</i></br>{{post.downvotesCount}}<i class="material-icons">thumb_down</i></div>
+            <a href="/post/{{id}}">{{post.comments.length}} comments</a>
+        </div>
+        <div style="margin-bottom: 20px;">
+            {{post.upvotesCount}} <i class="material-icons">thumb_up</i>
+            {{post.downvotesCount}}<i class="material-icons">thumb_down</i>
+        </div>
+
+
+
+        <div>
+            <span>
+                by {{post.user.username}} on {{format_date created_at}}
+            </span>
 
         </div>
 

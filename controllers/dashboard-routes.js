@@ -176,6 +176,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
       "id",
       "song_title",
       "song_artist",
+      "song_url",
       "review",
       "rating",
       "created_at",
@@ -216,6 +217,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
           loggedIn: true
         });
       } else {
+        console.log("error happened in edit post route")
         res.status(404).end();
       }
     })
