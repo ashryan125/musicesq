@@ -81,6 +81,11 @@
     margin-bottom: 24px;
   }
 
+  .post-style {
+    color: gray;
+    font-style: italic;
+  }
+  
   .border-line{
     border: white 1px solid;
   }
