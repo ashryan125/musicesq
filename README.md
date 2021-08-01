@@ -1,6 +1,9 @@
 # Beat-IT
 
 ## Description
+```
+This webpage, BEAT IT is based on songs. The website provides a user to post music by searching their favorite song which is connected through Spotify API, write a review about the song, as well as give the song a rating of their choice from 1-5. The user can go to other user's posts and add their comment on the post and also vote thier input of like or dislike. 
+```
 
 ### Website 
 Deployed on Heroku!
@@ -25,7 +28,7 @@ Deployed on Heroku!
 * Node
 * Express
 * MVC
-* API
+* Spotify API
 
 ---
 
