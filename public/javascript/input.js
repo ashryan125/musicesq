@@ -83,23 +83,23 @@ async function apiCall(event) {
     }
 }
 
-function addActive(x) {
-    //a function to classify an item as "active":
-    if (!x) return false;
-    //start by removing the "active" class on all items:
-    removeActive(x);
-    if (currentFocus >= x.length) currentFocus = 0;
-    if (currentFocus < 0) currentFocus = (x.length - 1);
-    //add class "autocomplete-active":
-    x[currentFocus].classList.add("autocomplete-active");
-}
+// function addActive(x) {
+//     //a function to classify an item as "active":
+//     if (!x) return false;
+//     //start by removing the "active" class on all items:
+//     removeActive(x);
+//     if (currentFocus >= x.length) currentFocus = 0;
+//     if (currentFocus < 0) currentFocus = (x.length - 1);
+//     //add class "autocomplete-active":
+//     x[currentFocus].classList.add("autocomplete-active");
+// }
 
-function removeActive(x) {
-    //a function to remove the "active" class from all autocomplete items:
-    for (var i = 0; i < x.length; i++) {
-        x[i].classList.remove("autocomplete-active");
-    }
-}
+// function removeActive(x) {
+//     //a function to remove the "active" class from all autocomplete items:
+//     for (var i = 0; i < x.length; i++) {
+//         x[i].classList.remove("autocomplete-active");
+//     }
+// }
 
 //closes the lists
 function closeAllLists(elmnt) {
