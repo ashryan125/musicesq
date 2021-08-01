@@ -115,3 +115,5 @@ document.addEventListener("click", function (e) {
 
 //execute a function when a key is pressed
 document.querySelector('#searchTitleInput').addEventListener('keydown', apiCall);
+
+

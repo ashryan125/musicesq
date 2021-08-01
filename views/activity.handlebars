@@ -1,26 +1,35 @@
 <section>
   <h1>Your Activity</h1>
   {{#each posts}}
-  <div class="card black darken-1">
+   <div class="card black darken-1">
     <div class="card-content border-line">
-      <div class="line">
-        <span class ="card-title"><a href="/post/{{id}}">{{song_title}} - {{song_artist}}</a></span>
-        <div class="rate">
-          <p><a href="{{song_url}}" target="_blank">click here to checkout the song!</a></p>
-          <p>Rating: {{rating}}</p>
+      <section class="post">
+        <div>
+         <div class="line">
+            <span class="card-title"><a href="/post/{{id}}">{{song_title}}
+                    <span class="post-style">({{song_artist}})</span>
+                </a></span>
+            <p><a href="{{song_url}}" target="_blank" class="post-style">Wanna hear it?? Click here!</a></p>
+            <div class="rate" style="margin-top: 10px;">
+                <p>Rating: {{rating}}</p>
+            </div>
+            <div class="rate">
+                <p>Review: {{review}} </p>
+            </div>
         </div>
-      </div>
-      <br>
-      <div>
-        <p>Review: {{review}} </p>
-        by {{user.username}} on
-        {{format_date created_at}}
-      </div>
-      <div class="rate">
-        <a href="/post/{{id}}">{{comments.length}} comments</a>
-        <div>{{upvotesCount}} <i class="material-icons">thumb_up</i></br>{{downvotesCount}}<i class="material-icons">thumb_down</i></div>
-      </div>
+
+         <div class="rate">
+            <a href="/post/{{id}}">{{comments.length}} comments</a>
+        </div>
+        <div style="margin-bottom: 20px;">
+            {{upvotesCount}} <i class="material-icons">thumb_up</i>
+            {{downvotesCount}}<i class="material-icons">thumb_down</i>
+        </div>
+
+        </section>
     </div>
   </div>
+</section>
+
   {{/each}}
 </section>
