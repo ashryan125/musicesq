@@ -7,6 +7,7 @@ let artistUrlInput = document.getElementById("song-url");
 async function apiCall(event) {
     event.preventDefault;
 
+    
 
     // get song
     searchInput.onkeydown = function () {
